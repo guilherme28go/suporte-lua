@@ -1,0 +1,2071 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Suporte Lua | Latam Airlines</title>
+    <style>
+        /* Variáveis de Cores Corporativas LATAM */
+        :root {
+            --latam-blue: #0f004d;
+            --latam-red: #E8114B;
+            --latam-light-blue: #1B0088;
+            --bg-color: #f4f5f7;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #5e6670;
+            --border-color: #e0e5eb;
+            --sidebar-width: 280px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        /* Menu Lateral (Sidebar) */
+        aside {
+            width: var(--sidebar-width);
+            background-color: var(--white);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            z-index: 100;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.03);
+        }
+
+
+        .brand {
+            padding: 25px 20px;
+            background-color: var(--latam-blue);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 3px solid var(--latam-red);
+        }
+
+
+        .brand svg {
+            fill: var(--white);
+            width: 32px;
+            height: 32px;
+        }
+
+
+        .brand-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+
+        .brand-text span {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+        }
+
+
+        .nav-menu {
+            padding: 20px 0;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+
+        .nav-menu button {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+
+        .nav-menu button svg {
+            fill: var(--text-muted);
+            width: 20px;
+            height: 20px;
+            transition: fill 0.2s;
+        }
+
+
+        .nav-menu button:hover {
+            background-color: #f8f9fa;
+            color: var(--latam-light-blue);
+        }
+
+
+        .nav-menu button.active {
+            background-color: #f0f2f5;
+            color: var(--latam-blue);
+            border-left-color: var(--latam-red);
+        }
+
+
+        .nav-menu button.active svg {
+            fill: var(--latam-red);
+        }
+
+
+        /* Área Principal de Conteúdo */
+        main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - var(--sidebar-width));
+        }
+
+
+        .topbar {
+            background-color: var(--white);
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+
+
+        .search-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+
+        .search-container svg {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: #999;
+            width: 20px;
+            height: 20px;
+        }
+
+
+        .search-input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background-color: #f8f9fa;
+            transition: all 0.3s;
+        }
+
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--latam-light-blue);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(27, 0, 136, 0.1);
+        }
+
+
+        .content-area {
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+
+        .section-header {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+
+        .section-header h2 {
+            color: var(--latam-blue);
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+
+        .tab-content.active {
+            display: block;
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--latam-light-blue);
+        }
+
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            border-color: #d0d7df;
+        }
+
+
+        .card h3 {
+            color: var(--latam-blue);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-right: 70px;
+        }
+
+
+        .card-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(232, 17, 75, 0.1);
+            color: var(--latam-red);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+
+        .card-link:hover {
+            background-color: var(--latam-red);
+            color: var(--white);
+        }
+        
+        .link-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .link-group a {
+            flex: 1;
+            text-align: center;
+            background-color: #f4f5f7;
+            color: var(--latam-blue);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+
+        .link-group a:hover {
+            background-color: var(--latam-light-blue);
+            color: var(--white);
+            border-color: var(--latam-light-blue);
+        }
+
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+
+        /* Variantes de cores do topo dos cards */
+        .card-form::before { background-color: #009688; }
+        .card-slide::before { background-color: #F57C00; }
+        .card-pic::before { background-color: #7B1FA2; }
+
+
+        .table-container {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--latam-blue);
+            text-align: left;
+            padding: 15px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            vertical-align: middle;
+        }
+
+
+        tr:hover td { background-color: #fcfcfc; }
+        .td-name { font-weight: 600; color: var(--latam-blue); }
+        .td-desc { color: var(--text-muted); font-size: 0.85rem; }
+        .td-phone { font-weight: 600; color: var(--latam-red); white-space: nowrap; }
+
+
+        /* Painel de Personalização */
+        .personalization-panel {
+            background-color: var(--latam-light-blue);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+
+        .personalization-panel h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .personalization-panel .input-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        .personalization-panel input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 15px;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+
+        .personalization-panel input:focus {
+            border-color: var(--latam-red);
+            box-shadow: 0 0 8px rgba(232, 17, 75, 0.4);
+        }
+
+
+        /* Estilo Exclusivo dos Quadrados do Tradutor (Sobreposição de Regras) */
+        .loc-box {
+            width: 60px !important;
+            height: 70px !important;
+            min-width: 60px !important;
+            flex: unset !important;
+            font-size: 28px !important;
+            text-align: center !important;
+            border: 2px solid var(--border-color) !important;
+            border-radius: 8px !important;
+            text-transform: uppercase !important;
+            font-weight: bold !important;
+            color: var(--latam-blue) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+            padding: 0 !important;
+            background-color: #fff;
+        }
+        
+        .loc-box:focus {
+            border-color: var(--latam-red) !important;
+            box-shadow: 0 0 8px rgba(232, 17, 75, 0.4) !important;
+            outline: none !important;
+        }
+
+
+        /* Estilo dos Scripts */
+        .script-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+
+        .script-header {
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        .script-header h4 {
+            color: var(--latam-blue);
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .script-timing {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+
+        .script-body {
+            padding: 20px;
+            background-color: var(--white);
+        }
+
+
+        .script-text {
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            color: #222;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+
+        .btn-copy {
+            background-color: var(--latam-light-blue);
+            color: var(--white);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+
+
+        .btn-copy:hover {
+            background-color: var(--latam-blue);
+        }
+        
+        footer {
+            background-color: var(--white);
+            border-top: 1px solid var(--border-color);
+            padding: 20px 40px;
+            text-align: right;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: var(--latam-blue);
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.3s, fadeout 0.3s 2.5s;
+        }
+    </style>
+</head>
+<body>
+
+
+    <aside>
+        <div class="brand">
+            <svg viewBox="0 0 24 24">
+                <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+            </svg>
+            <div class="brand-text">
+                <h1>Suporte Lua</h1>
+                <span>Hub Operacional Latam</span>
+            </div>
+        </div>
+
+
+        <div class="nav-menu">
+            <button class="tab-btn active" onclick="openTab('sistemas')">
+                <svg viewBox="0 0 24 24"><path d="M4 6H20V16H4M20 18A2 2 0 0 0 22 16V6C22 4.89 21.1 4 20 4H4C2.89 4 2 4.89 2 6V16A2 2 0 0 0 4 18H0V20H24V18H20Z"/></svg>
+                Sistemas e Logins
+            </button>
+            <button class="tab-btn" onclick="openTab('forms')">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2M13 9V3.5L18.5 9H13Z"/></svg>
+                Formulários
+            </button>
+            <button class="tab-btn" onclick="openTab('slides')">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.89 20.1 3 19 3M19 19H5V5H19V19M17 12H13V8H11V12H7V14H11V18H13V14H17V12Z"/></svg>
+                Slides Oficiais
+            </button>
+            <button class="tab-btn" onclick="openTab('pic')">
+                <svg viewBox="0 0 24 24"><path d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2M15 15H9V13H15V15M18 11H6V9H18V11M18 7H6V5H18V7Z"/></svg>
+                Base de Conhecimento (PIC)
+            </button>
+            <button class="tab-btn" onclick="openTab('telefones')">
+                <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                Diretório de Telefones
+            </button>
+            <button class="tab-btn" onclick="openTab('scripts')">
+                <svg viewBox="0 0 24 24"><path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z"/></svg>
+                Scripts de Atendimento
+            </button>
+            <button class="tab-btn" onclick="openTab('tradutor')">
+                <svg viewBox="0 0 24 24"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"/></svg>
+                Tradutor Fonético
+            </button>
+        </div>
+    </aside>
+
+
+    <main>
+        <div class="topbar">
+            <div class="search-container">
+                <svg viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/></svg>
+                <input type="text" class="search-input" id="global-search" placeholder="Pesquisar em toda a base de conhecimento..." onkeyup="filterAll()">
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+                Operação Latam
+            </div>
+        </div>
+
+
+        <div class="content-area">
+            
+            <!-- ABA 1: SISTEMAS (TODOS RESTAURADOS) -->
+            <section id="sistemas" class="tab-content active">
+                <div class="section-header">
+                    <h2>Sistemas e Plataformas Operacionais</h2>
+                </div>
+                
+                <div class="grid search-scope">
+                    <div class="card">
+                        <h3>SABRE</h3>
+                        <a href="#" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema central da Latam para realizar alterações adições e remover informações do voo.</p>
+                    </div>
+                    <div class="card">
+                        <h3>INTEGRALL</h3>
+                        <a href="https://id.konecta.cloud" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de marcação de pontos e visualização de holerite, benefícios e escala.</p>
+                    </div>
+                    <div class="card">
+                        <h3>PORTAL DO SUPORTE LUA</h3>
+                        <a href="https://sites.google.com" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de visualização de procedimentos para uso de agentes do Suporte Lua.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ALLEGRO</h3>
+                        <a href="http://altm.prod.mod.cloud.aircorp.aero:12060/Allegro-2.0/private/sales/Sales.jsf" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de pagamentos de bilhetes realizados pelo Sabre.</p>
+                    </div>
+                    <div class="card">
+                        <h3>AGENTE 360</h3>
+                        <a href="https://www.latamairlines.com/br/pt/home/agents" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema padrão de alterações e visualização de informações do bilhete de forma dinâmica.</p>
+                    </div>
+                    <div class="card">
+                        <h3>GENESYS</h3>
+                        <a href="https://login.mypurecloud.com/#/authenticate-adv/org/latam" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de chamadas para atendimentos dos passageiros e coleta de informações pela ura.</p>
+                    </div>
+                    <div class="card">
+                        <h3>APP DEVOLUÇÕES</h3>
+                        <a href="http://devolatam.app.lan.com:21167/DevolucionesLatam-1.0/login.jsf" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de devoluções para bilhetes sem administrador ou com o Agente 360 instável.</p>
+                    </div>
+                    <div class="card">
+                        <h3>AMELIA</h3>
+                        <a href="https://amelia.appslatam.com/#/chat?mode=AMELIA" target="_blank" class="card-link">Acessar</a>
+                        <p>IA para avaliação completa de cada ligação com pontos de melhora e disponibiliza escuta.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SOFIA</h3>
+                        <a href="https://copiloto-agentes.appslatam.com/copilot/main" target="_blank" class="card-link">Acessar</a>
+                        <p>IA para avaliação de chamadas realizadas pelo agente e atualizada diariamente.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SERVIÇOS ESPECIAIS</h3>
+                        <a href="http://altm.prod.mod.cloud.aircorp.aero:12060/Allegro-2.0/private/specialservices/specialServicesv2.jsf" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de serviços especiais para adição. Caso não funcione, realizar pelo Sabre.</p>
+                    </div>
+                    <div class="card">
+                        <h3>FAQ IA 2.0</h3>
+                        <a href="https://www.intergrall.com.br" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de informações elaborados pela latam com auxílio da IA.</p>
+                    </div>
+                    <div class="card">
+                        <h3>MEDALIA</h3>
+                        <a href="https://latam.medallia.com" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de notas coletados pelos passageiros via email para todas as interações.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ZENDESK</h3>
+                        <a href="https://casounico.zendesk.com/agent/dashboard" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de visualização de casos e acesso de documentos enviados por outros agentes.</p>
+                    </div>
+                    <div class="card">
+                        <h3>PIC</h3>
+                        <a href="https://pic-latam.zendesk.com/hc/pt-br" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de informações para instruir os agentes sobre informações da Latam atualizados.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ADM PRÉ/PÓS-VIAGEM</h3>
+                        <a href="http://airpdm.prod.mod.cloud.aircorp.aero:12060/AirportDataMartApp-1.0/index.jsf" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de voos elaborado para apresentar todas informações pré e pós voo.</p>
+                    </div>
+                    <div class="card">
+                        <h3>TRAVEL VOUCHER</h3>
+                        <a href="http://travelvoucher.app.lan.com:21169/TravelVoucher-1.0/" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de vouchers para pesquisas e análises de status para apresentação para o passageiro.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE CUV</h3>
+                        <a href="https://lookerstudio.google.com/u/0/reporting/928e9014-1dc6-4634-b9f5-08331e265dde/page/ggysD?pli=1" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de informações sobre o CUV e faturas enviadas para o pax e pagamentos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>DETALHES DA PNR</h3>
+                        <a href="http://newpasdate.app.lan.com:22156/PastDate-2.0/private/DetailPNR.jsf" target="_blank" class="card-link">Acessar</a>
+                        <p>Visualizar dados sobre o voo sem a necessidade de abrir o voo no SABRE.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE CONTINGÊNCIA</h3>
+                        <a href="https://datastudio.google.com/u/0/reporting/90377e61-d09d-4917-9ecf-7241be64a498/page/p_1y8no774td?s=leFlXkzOXxc" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema para evidenciar atrasos com responsabilidade latam ocorridas no aeroporto.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE ATESTADO (CFM)</h3>
+                        <a href="https://portal.cfm.org.br/busca-medicos" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de verificação de autenticidade de informações médicas enviadas pelos pax.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE PRESCRIÇÃO MÉDICA</h3>
+                        <a href="https://prescricao.cfm.org.br/documento?_format=application%2Fpdf" target="_blank" class="card-link">Acessar</a>
+                        <p>Verificação de autenticidade de informações médicas através de relatório médico.</p>
+                    </div>
+                    <div class="card">
+                        <h3>VALIDAR DOCUMENTO MÉDICO</h3>
+                        <a href="https://prescricao.cfm.org.br/documento" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de validação de autenticidade de informações médicas enviadas pelos pax.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CANCELAR CHECK-IN</h3>
+                        <a href="https://www.agency.latamairlines.com/br/pt/check-in/removal" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de anulação de check-in de voos com check-in automático ou manual ativos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>INCLUIR CHECK-IN</h3>
+                        <a href="https://www.latamairlines.com/br/pt/check-in" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de adição de check-in de voos prontos para processamento.</p>
+                    </div>
+                    <div class="card">
+                        <h3>VISUALIZAR AGÊNCIA DE VIAGENS</h3>
+                        <a href="https://store.iata.org/ieccacfree?refURL=http%3A%2F%2Fstore.iata.org%2Fieccacfree" target="_blank" class="card-link">Acessar</a>
+                        <p>Visualizar agências que emitem bilhetes oficialmente para informar e instruir o passageiro.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ATESTADO ODONTOLÓGICO</h3>
+                        <a href="https://busca-profissionais.cfo.org.br/" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de verificação de autenticidade de informações médicas enviadas pelos pax.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE PONTOS QUALIFICÁVEIS</h3>
+                        <a href="https://datastudio.google.com/u/0/reporting/30aae1d4-db9c-4d00-9599-8ea24a7627ae/page/tEnnC" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de verificação de pontos qualificáveis que o cliente obteve no decorrer do ano.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONSULTA DE TABELA FIXA</h3>
+                        <a href="https://datastudio.google.com/u/0/reporting/48c61c42-5ce6-4bca-9ff6-906889d42b73/page/p_kzh41bdxtd" target="_blank" class="card-link">Acessar</a>
+                        <p>Disponibilidade de venda de passagens por milhas utilizando a tabela fixa.</p>
+                    </div>
+                    <div class="card">
+                        <h3>REEMBOLSOS SEATBOOST</h3>
+                        <a href="https://docs.google.com/spreadsheets/d/1tVaJb25ejc26h4stFriCkUGGnCYsvUxxXEedXHjevRA/edit?gid=0#gid=0" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de reembolso de assentos de acordo com a tratativa enviada pelo protocolo vinculado.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ACADEMIA LATAM SAP</h3>
+                        <a href="https://latamair.lms.hr.cloud.sap/learning/user/portal.do?siteID=EXT&landingPage=login" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de cursos obrigatórios ou opcionais sobre as tratativas de acordo com a política da Latam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>MANTENEDOR FRAUDE</h3>
+                        <a href="https://datastudio.google.com/u/0/reporting/d02d7c83-59b0-44f7-ab32-98982749686d/page/p_ziqbrl54wd" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de acompanhamento de acordo com a política da Latam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>PORTAL DO ÚNICO</h3>
+                        <a href="https://identity.acesso.io/signin?service=6a1c72cd-a47e-4272-918b-16e56d312c0c&continue=https%3A%2F%2Fidentity.acesso.io%2Fauth%2Fidp%2Fcallback" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de identificação de usuários e cadastro de biometria facial da Latam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONTINGÊNCIA OLA</h3>
+                        <a href="https://pt.flightaware.com/" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de consulta de contingências para voos que não sejam da Latam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CONTINGÊNCIA LATAM SIGA</h3>
+                        <a href="https://siga-latam.com/app/#/login" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de consulta de contingências para voos operados pela Latam.</p>
+                    </div>
+                    <div class="card">
+                        <h3>ADERÊNCIA AO AGENTE 360</h3>
+                        <a href="https://datastudio.google.com/u/0/reporting/c6a5fbf4-0ec1-49d4-8b5a-b635da7185cf/page/p_jnbjcvnfpd?pli=1" target="_blank" class="card-link">Acessar</a>
+                        <p>Visualização de alterações realizados por agentes no site do agente 360 ou pelo passageiro.</p>
+                    </div>
+                    <div class="card">
+                        <h3>FIORI - CENTRO DE CUSTO</h3>
+                        <a href="https://fiori.appslatam.com/sites/prd#employee-Display&/" target="_blank" class="card-link">Acessar</a>
+                        <p>Visualização de centro de custos associados a funcionários da Latam e terceirizados.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SHOPPING LATAM PASS</h3>
+                        <a href="https://adm-shopping.latampass.latam.com/pt_br/inicio" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de visualização da Latam Pass associados a pedidos no Shopping.</p>
+                    </div>
+                    <div class="card">
+                        <h3>GRAFANA</h3>
+                        <a href="https://ebizrr.grafana.net/a/grafana-setupguide-app/home" target="_blank" class="card-link">Acessar</a>
+                        <p>Visualização da API Latam associados a códigos de administração de APIs e code-ia.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SIGA - AEROPORTO</h3>
+                        <a href="https://siga-latam.com/home" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de contingência integrado com as informações diretas do aeroporto.</p>
+                    </div>
+                    <div class="card">
+                        <h3>FORMULÁRIO DE TIPIFICAÇÃO</h3>
+                        <a href="#" target="_blank" class="card-link">Acessar</a>
+                        <p>Formulário de preenchimento de tipificação do suporte (Preencher Forms).</p>
+                    </div>
+                    <div class="card">
+                        <h3>CEPNR - ESTOURO DE CLASSE</h3>
+                        <a href="http://cepnr.cloud.aircorp.aero:12060" target="_blank" class="card-link">Acessar</a>
+                        <p>Sistema de estouro de classe para bilhetes com Same Day ou Correção de nome.</p>
+                    </div>
+                    <div class="card">
+                        <h3>STATUS DE VOO</h3>
+                        <a href="https://www.latamairlines.com/br/pt/flight-status/?searchType=1" target="_blank" class="card-link">Acessar</a>
+                        <p>Consulta pública direta de status de voos comerciais.</p>
+                    </div>
+                    <div class="card">
+                        <h3>CENTRAL DE INTERMITÊNCIAS</h3>
+                        <a href="https://script.google.com/a/macros/outsourcing-account.com/s/AKfycbyTrpP-yTsK52A7IVtWGAJCdSeB5FjjkrR7haxpsW04vuS81gC1dFjXjNozDGrIijYzjA/exec" target="_blank" class="card-link">Acessar</a>
+                        <p>Registro e controle operacional de intermitências e quedas de sistema.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABA 2: FORMULÁRIOS -->
+            <section id="forms" class="tab-content">
+                <div class="section-header">
+                    <h2>Formulários de Atendimento</h2>
+                </div>
+                
+                <div class="grid search-scope">
+                    <div class="card card-form">
+                        <h3>Forms de Contingência</h3>
+                        <p>Registro estruturado e consulta de contingências aprovadas.</p>
+                        <div class="link-group">
+                            <a href="https://docs.google.com/document/d/12XxK98zybwg12jv86K58T8dQlKXrDiNVnII9nuUJokU/edit?usp=sharing" target="_blank">Preencher Forms</a>
+                            <a href="https://datastudio.google.com/u/0/reporting/90377e61-d09d-4917-9ecf-7241be64a498/page/p_1y8no774td?s=leFlXkzOXxc" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="card card-form">
+                        <h3>Declaração de Embarque</h3>
+                        <p>Formulário e consulta de dados de embarque de passageiros.</p>
+                        <div class="link-group">
+                            <a href="https://docs.google.com/document/d/1QwUkCsnrf8zg9r7fgo1vyI5Pi5aROrMe/edit?usp=sharing&ouid=110670590415255929972&rtpof=true&sd=true" target="_blank">Abrir Word</a>
+                            <a href="http://airpdm.prod.mod.cloud.aircorp.aero:12060/AirportDataMartApp-1.0/index.jsf" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="card card-form">
+                        <h3>Menor Desacompanhado</h3>
+                        <p>Documentação exigida para viagens de menores (Consulta CNJ).</p>
+                        <div class="link-group">
+                            <a href="https://docs.google.com/document/d/1qvi6_-bHGMzlDKkkplhqyyZwZTqSV6UEOF-9f0pFkL4/edit?usp=sharing" target="_blank">Gerar Doc</a>
+                            <a href="https://atos.cnj.jus.br/atos/detalhar/3015" target="_blank">Regras CNJ</a>
+                        </div>
+                    </div>
+                    <div class="card card-form">
+                        <h3>Formulário MEDIF / FREMEC</h3>
+                        <p>Certificação médica para autorização de embarque em casos graves.</p>
+                        <div class="link-group">
+                            <a href="https://latamairlines.zendesk.com/hc/pt-br/requests/new?ticket_form_id=251458" target="_blank">Link (Zendesk)</a>
+                            <a href="https://drive.google.com/file/d/19l4sQh4p58xhSUUMJRDh4A6muAqMRfqf/view?usp=sharing" target="_blank">Baixar PDF</a>
+                        </div>
+                    </div>
+                    <div class="card card-form">
+                        <h3>Código 100 (Fraude Allegro)</h3>
+                        <p>Protocolo de emissões rejeitadas pela validação de fraude do Allegro.</p>
+                        <div class="link-group">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScG0is7fMXKDY5OFKp2X3t-4p7AkPHdjR3Ko9_nrCPothiJJQ/viewform" target="_blank">Preencher Forms</a>
+                            <a href="https://pic-latam.zendesk.com/hc/pt-br/articles/360055886113" target="_blank">Regra (PIC)</a>
+                        </div>
+                    </div>
+                    <div class="card card-form">
+                        <h3>Acionamento Indevido</h3>
+                        <p>Formulário de denúncia de acionamento indevido operacional.</p>
+                        <div class="link-group">
+                            <a href="#" target="_blank">Preencher Forms</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABA 3: SLIDES E MANUAIS -->
+            <section id="slides" class="tab-content">
+                <div class="section-header">
+                    <h2>Slides Oficiais (Suporte Lua)</h2>
+                </div>
+                
+                <div class="grid search-scope">
+                    <div class="card card-slide">
+                        <h3>Adicionar Check-In</h3>
+                        <p>Guia passo a passo para inclusão manual de check-in.</p>
+                        <a href="https://drive.google.com/open?id=1s5V95E1Vg9Q5QC6Wc2Z25jcooAQY_kKT" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Assento Sem Custo</h3>
+                        <p>Procedimento para marcação isenta por regra tarifária ou status.</p>
+                        <a href="https://drive.google.com/open?id=11gMgcm6kNcs5vaNKV7lo_9RyP0TbRH-c" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Bilhete de Agência</h3>
+                        <p>Regras para tratativas e assumir controle de bilhetes indiretos.</p>
+                        <a href="https://drive.google.com/open?id=10EIZDg8k14sIepj-rZgzDchSHwqAiO3s" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Classes Tarifárias</h3>
+                        <p>Mapeamento e hierarquia de classes operadas pela Latam.</p>
+                        <a href="https://drive.google.com/open?id=1gdmW6z6myoiFKLBadE2y5p3QgFGQKkGC" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Inserir ARNK</h3>
+                        <p>Comandos e regras para inserção de trechos terrestres (ARNK).</p>
+                        <a href="https://drive.google.com/open?id=1fs1vaEua8Ws4ElxcjBszsfLXD5dCuQqt" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Lista de Status</h3>
+                        <p>Significado dos status de segmentos (HK, HL, UN, TK, etc).</p>
+                        <a href="https://drive.google.com/open?id=1kUqbKdnd2Sk6aSyrvdWcU6uaWaLnZGOb" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Reassociação de Bilhetes</h3>
+                        <p>Processo de linkar e-ticket aos segmentos de voo atualizados.</p>
+                        <a href="https://drive.google.com/open?id=16LVTdCmIBoYZ9FPenhKxn4Gpdzq_Hbxe" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Stopover</h3>
+                        <p>Regras comerciais para paradas prolongadas permitidas.</p>
+                        <a href="https://drive.google.com/open?id=1z3dY565V3tI1ik8JtdPpQCFNx9VMBoN7" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Tarifa de Emergência</h3>
+                        <p>Como processar e validar compra/reembolso por óbito.</p>
+                        <a href="https://drive.google.com/open?id=1aS12H1Ta4LfFWf6sG0vLBT5Q6qzZlzXz" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Same Day</h3>
+                        <p>Antecipação e Postergação no mesmo dia via fluxo Latam.</p>
+                        <a href="https://drive.google.com/open?id=1P5YCBDtsENzkkD-TtqdxDOkRukkHGl6U" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Emissão por Contingência</h3>
+                        <p>Fluxo de emissão manual quando automatismos falham.</p>
+                        <a href="https://drive.google.com/open?id=1jIWC4CcOugZS7ctAw7xCH5rNSSgep2ZO" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Adicionar Remarks</h3>
+                        <p>Comandos corretos para anotações OSI, SSR e Remarks no PNR.</p>
+                        <a href="https://docs.google.com/presentation/u/0/d/1F1r1AUvOmj0yb89tWx-i2dRprtYRWkSapOIAFfY-6Ao/edit" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Venda de Assentos</h3>
+                        <p>Processamento de Ancillaries, LATAM+ e EXST/CBBG.</p>
+                        <a href="https://docs.google.com/presentation/u/0/d/1WjnI2do-RWAdGuOSWT86nZsICP9nkeEElWKFueq_JaA/edit" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Troca de Titularidade</h3>
+                        <p>Quando é permitido e processos via APEC e Sabre.</p>
+                        <a href="https://drive.google.com/open?id=1hX9OJYe5V4hSEibXno9Um--nMdTVTcjN" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Remarcação Voluntária</h3>
+                        <p>Fluxo padrão de cobrança de multa e diferença tarifária.</p>
+                        <a href="https://drive.google.com/open?id=1CB8Q1J3VDqq-VjTvXWcWq_iyule7Ku3J" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Remarcação Involuntária</h3>
+                        <p>Proteção de passageiros afetados por alterações da Cia.</p>
+                        <a href="https://drive.google.com/open?id=1SuktLVsE4gMY9Z6LsIad8m4Gk7GsUET3" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Web Devoluções</h3>
+                        <p>Uso correto da ferramenta para devoluções padrão.</p>
+                        <a href="https://drive.google.com/open?id=1FIvVC0fUED_CYEGDO2zVy_CdNhykRVgT" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Allegro - Operação</h3>
+                        <p>Guia definitivo do sistema de pagamento Allegro.</p>
+                        <a href="https://drive.google.com/open?id=1o7jKoQte_vV98c5SjH8SM8goaZUHXVTb" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Gastos Incorridos</h3>
+                        <p>Reembolsos por despesas geradas em contingências.</p>
+                        <a href="https://drive.google.com/open?id=13-5fgPiEojNfl3esMoN0qBWHHfpiRhA4" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Remarcação Staff Travel</h3>
+                        <p>Tratativas específicas para bilhetes de funcionários AD/ID.</p>
+                        <a href="https://drive.google.com/open?id=1c-u71GSByTd_jtyqpg3e7O7kAIZIklc2" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Erro Operacional Evidente</h3>
+                        <p>Análise e concessão baseada em erro comprovado do agente.</p>
+                        <a href="https://docs.google.com/presentation/u/0/d/1DiDuUWwrNR3phRVZOf92dJ_2Hvk2ZeZTNG1oLxf6-LM/edit" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Remarcação Voluntária INF</h3>
+                        <p>Como calcular taxas para bebês sem assento na remarcação.</p>
+                        <a href="https://docs.google.com/presentation/u/0/d/1tQur_g1up50_mNZ_MkHNOhermDc3u-XJ9xFN1rq6AcQ/edit" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Criar Exceção (Agente 360)</h3>
+                        <p>Uso da funcionalidade 'Allow Me' para waiver comercial.</p>
+                        <a href="https://docs.google.com/presentation/u/0/d/18jCNHUjv3i3Bov-BZzcMnF1eimPUpBSfuGs8Z-1sHGo/edit" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Pagamento EMD Contingência</h3>
+                        <p>Emissão de recibos ancillaries manuais pós-pane sistêmica.</p>
+                        <a href="https://drive.google.com/open?id=1iXKrB4RBjkfM86egc9qev_WUqtMFEAt8" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                    <div class="card card-slide">
+                        <h3>Correção de Nome</h3>
+                        <p>Regras IATA e Latam para erros de digitação (até 3 letras).</p>
+                        <a href="https://drive.google.com/open?id=16kPUz7RuW5LbqMjosmfJGSq7JwI9CBfD" target="_blank" class="card-link">Abrir Slide</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABA 4: PIC (BASE DE CONHECIMENTO COMPLETA) -->
+            <section id="pic" class="tab-content">
+                <div class="section-header">
+                    <h2>Procedimentos PIC Operacional Completo</h2>
+                </div>
+                
+                <div class="grid search-scope">
+                    <!-- HVC & Benefícios -->
+                    <div class="card card-pic">
+                        <h3>Benefícios LATAM Pass</h3>
+                        <p>Programa de fidelidade. Inscrição disponível para maiores de 2 anos, acumulam milhas e pontos qualificáveis para acessar benefícios exclusivos das categorias Elite.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Resgate Milhas Tabela Fixa OLA</h3>
+                        <p>Resgate de milhas em voos 100% de outras cias (OLA) não disponível no Agente 360. Feito via Sabre/Allegro em classes e fare basis específicos para residentes selecionados.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Resgate Milhas Cias Parceiras</h3>
+                        <p>A quantidade necessária será calculada com base na cabine escolhida e nas regiões da viagem até o destino final, independente do número de conexões na mesma região.</p>
+                    </div>
+                    
+                    <!-- Tarifas & Comercial -->
+                    <div class="card card-pic">
+                        <h3>Diferença de Tarifas</h3>
+                        <p><strong>Light:</strong> Apenas mochila (10kg) e mala peq (12kg). Nac. Fare: 1; Int. Fare: SL.<br><strong>Standard:</strong> Inclui 1 despachada (23kg) e assento comum. Nac. Fare: 4; Int: KM.<br><strong>Full:</strong> Remarcação sem taxa e diferença. Nac. Fare: 7; Int: KD.<br><strong>Premium Business:</strong> Poltrona-Cama, embarque prioritário.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Construção Tarifária</h3>
+                        <p>Uma construção de tarifas mostra a forma como o Sabre calculou o valor IATA. É composta por um preço base mais uma Queue (Q) correspondente ao preço do combustível.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Tarifas Públicas e Privadas</h3>
+                        <p>As tarifas (fare basis) incluídas compõem o preço que o cliente paga pela viagem desde o ponto de origem (primeiro ponto de partida) até o último ponto de chegada no bilhete.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Programa Voa Brasil</h3>
+                        <p>Projeto Gov Federal: aposentados INSS compram trechos com descontos (até R$200 + taxas por trecho). Emissões operam em fluxo fechado no Brasil.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Staff Travel (Colaboradores)</h3>
+                        <p>Programa de passagens com descontos para colaboradores LATAM (mínimo 6 meses de empresa pelo RH Connect) e beneficiários, sujeitos à política interna.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Troca de Titularidade</h3>
+                        <p><strong>Voos Nacionais:</strong> R$ 450,00 (Somente Light/Standard) + Diferença Tarifária.<br><strong>Voos Int:</strong> R$ 500,00 + Diferença.<br><strong>Docs:</strong> IDs do titular e beneficiado, Carta de Autorização simples.</p>
+                    </div>
+                    
+                    <!-- Embarque & Aeroporto -->
+                    <div class="card card-pic">
+                        <h3>Grupos de Embarque</h3>
+                        <p><strong>Prioridades por Lei:</strong> Gestantes, lactantes, deficientes, idosos, crianças de colo.<br><strong>G1:</strong> Black Signature, Black, Oneworld Emerald.<br><strong>G2:</strong> Premium Business/Economy, Platinum.<br><strong>G3:</strong> Assentos LATAM+, Top/Plus.<br><strong>G4:</strong> Janela. <strong>G5:</strong> Meio. <strong>G6:</strong> Corredor.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Assistência Máxima (Meet & Assist)</h3>
+                        <p>No BR: Um agente da Latam acompanha o pax (check-in, raio-x, conexões). Cadeiras de rodas ou andadores do pax são despachados gratuitamente sem consumir franquia de bagagem.</p>
+                    </div>
+                    
+                    <!-- Exceções e Procedimentos -->
+                    <div class="card card-pic">
+                        <h3>Tarifa de Emergência</h3>
+                        <p><strong>Reembolso:</strong> Após viagem (voos 100% Latam, Economy). Exige atestado e parentesco.<br><strong>Desconto:</strong> 30% na Light, antes do voo. Óbito/internação com risco ocorrido há menos de 7 dias, ou nascimento < 48h. Código: 911LATAM.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Stopover</h3>
+                        <p>Parada intermediária >24h. O comum é de 1 a 3 dias nas cidades participantes (BSB, FOR, REC, MAO, CWB, BEL). Em São Paulo (GRU), a permanência deve durar de 1 a 5 dias sem custo de 2 bilhetes separados.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Same Day (Antecipar/Postergar)</h3>
+                        <p>R$ 100/pax no Brasil (Internacional é variável). Para antecipar: 1h40 antes do voo desejado. Postergar: 1h antes do voo original. Não permitido trocar conexão por direto ou caso tenha EMD de bagagem.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Apec - Correção de Nome</h3>
+                        <p>Correções restritas a até 3 letras (sem alterar o sobrenome ou titular). Acima disso, entra como exceção de correção de nome realizada no Sabre.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Apec - Allow Me e Retomar</h3>
+                        <p>Retomar: Desfazer alteração no bilhete caso haja erro no sistema. Allow Me: Criar exceções justas por erros operacionais evidentes de contact center ou aeroporto.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Incidentes no site / Honrar Tarifa</h3>
+                        <p>Em caso de erro de pagamento, a cobrança pendente é automaticamente cancelada no prazo de 2 horas. Se debitou no cartão, realizar fluxo de pagamento retido.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>MEDIF / FREMEC</h3>
+                        <p>Solicitação até 48h antes em voo 100% Latam. Atestado emitido máx. 10 dias antes. O acompanhante ganha 80% de desconto (emitido pelo BKO). Fremec dura de 6 a 24 meses.</p>
+                    </div>
+                    
+                    <!-- Pets, Crianças e Bagagens -->
+                    <div class="card card-pic">
+                        <h3>Menor Desacompanhado (UMNR)</h3>
+                        <p>Contratar 48h antes. Obrigatório de 8 a 11 anos. Opcional de 12 a 17 anos. Não permitido se a conexão for o último voo do dia ou > 4 horas. Preços: Brasil R$250, Longo Alcance US$150, Regional US$100.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Pet no Bagageiro</h3>
+                        <p>Voos domésticos: R$500 (até 23kg), R$700 (24-32kg), R$900 (33-45kg). <br>Limites: A319/320/321 suporta até 32kg (voos até 4h) ou 23kg (4-5h). Aeronaves 2 corredores (B767/B777/B787) aceitam até 45kg.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Pet na Cabine</h3>
+                        <p>Valor: R$ 200 (Peso incluso tamanho restrito). Restrito a 5 na Economy e 1 na Premium Economy. Não entra na Premium Business. Dimensões: 36x19x33cm (Caixa Rígida) ou 40x25x28cm (Flexível).</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Bebê Conforto (INCU)</h3>
+                        <p>Serviço gratuito se a criança possui até 25kg e viaja em assento próprio pago. Solicitar 72h antes (voos operados BR). Assento janela/meio e apenas 1 CRS por voo.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Berço / Moisés (BSCT)</h3>
+                        <p>Solicitar até 4h antes. Crianças até 10kg e 71cm. É adicionado sem custo de berço para o INF, mas exige pagamento do assento de primeira fila. Instalado apenas após decolagem.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Inclusão de bebê (INF)</h3>
+                        <p>Detalhes de inclusão de INF (Infant) em PNR de ADT já emitido com passagem existente. Reservas com INF geram cobrança internacional regular.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Assento Adicional (EXST/CBBG)</h3>
+                        <p>Permite reservar o assento ao lado (tamanhos extras ou instrumentos musicais) pagando a tarifa regular do trecho. Deve ser emitido para todo o itinerário restante, vinculando ao ticket.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Venda de Bagagem Antecipada</h3>
+                        <p>Habilitada apenas em reservas via LATAM e voos 100% LATAM (sem codeshares). Se o passageiro tem conexão com outras companhias (Interline), pagará no aeroporto.</p>
+                    </div>
+                    <div class="card card-pic">
+                        <h3>Cestas Pendentes</h3>
+                        <p>Manual de ações a executar: Regularizar todas as cestas que apresentem algum erro durante o dia ou no fechamento contábil de caixa.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ABA 5: TELEFONES -->
+            <section id="telefones" class="tab-content">
+                <div class="section-header">
+                    <h2>Diretório de Contatos e SACs</h2>
+                </div>
+                
+                <div class="table-container search-scope">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Setor / Companhia</th>
+                                <th>Descrição do Atendimento</th>
+                                <th>Telefones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-name">Sac Latam Fale</td>
+                                <td class="td-desc">Atendimento para elogios, sugestões ou reclamações (Português).</td>
+                                <td class="td-phone">0800 0123 200<br>+55 63 9248-7938</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Fale Internacional</td>
+                                <td class="td-desc">Atendimento em inglês e espanhol para elogios, sugestões ou reclamações.</td>
+                                <td class="td-phone">+55 11 2820-4816</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">WhatsApp Latam</td>
+                                <td class="td-desc">Atendimento de SAC por WhatsApp.</td>
+                                <td class="td-phone">+55 11 91085-7063</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Latam Pass</td>
+                                <td class="td-desc">Atendimento para o clube Latam Pass e milhas.</td>
+                                <td class="td-phone">4002 5700<br>0300 570 5700</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">WhatsApp Latam Pass</td>
+                                <td class="td-desc">Atendimento por whatsapp exclusivo clube Latam Pass.</td>
+                                <td class="td-phone">+55 11 94292-8695</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Latam Travel</td>
+                                <td class="td-desc">Atendimento para pacotes, seguros e hotéis vinculados.</td>
+                                <td class="td-phone">0300 777 2000<br>4002 5700</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Bagagem Latam</td>
+                                <td class="td-desc">Atendimento para extravio, perda ou bagagem especial (AHL).</td>
+                                <td class="td-phone">+55 11 94488-4460</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Latam Cargo</td>
+                                <td class="td-desc">Atendimento para bagagens grandes contratadas através da Latam Cargo.</td>
+                                <td class="td-phone">0300 115 9999</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Deficientes Auditivos</td>
+                                <td class="td-desc">Atendimento exclusivo com acessibilidade (TDD).</td>
+                                <td class="td-phone">0800 055 5500</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Black Signature</td>
+                                <td class="td-desc">Atendimento exclusivo para clientes categoria Black Signature.</td>
+                                <td class="td-phone">0800 771 1077</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Seguro Viagem Latam</td>
+                                <td class="td-desc">Atendimento para informações sobre acionamento de seguro viagem.</td>
+                                <td class="td-phone">0800 170 6133<br>+54 11 2703-9665</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Voe Pass</td>
+                                <td class="td-desc">Atendimento parceria programa de fidelidade da Latam com milhas.</td>
+                                <td class="td-phone">0800 770 3757</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">FFP</td>
+                                <td class="td-desc">Atendimento Backoffice para compras de passagens utilizando milhas.</td>
+                                <td class="td-phone">+55 11 99298-6482<br>+55 11 2445-2945</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Sac Delta Airlines</td>
+                                <td class="td-desc">Check-in, atendimento e SAC geral da parceira Delta.</td>
+                                <td class="td-phone">800-221-1212<br>0800-325-1999</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Reembolso Delta</td>
+                                <td class="td-desc">Atendimento exclusivo para reembolso voos operados pela Delta.</td>
+                                <td class="td-phone">800-847-057</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Bagagem Delta</td>
+                                <td class="td-desc">Atendimento exclusivo para bagagens voos operados pela Delta.</td>
+                                <td class="td-phone">800-325-8224</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Quantas</td>
+                                <td class="td-desc">Atendimento para check-in, atendimento e sac da parceira Quantas.</td>
+                                <td class="td-phone">0800 892 3346</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Viajanet</td>
+                                <td class="td-desc">Atendimento para agência de viagens OTA autorizada.</td>
+                                <td class="td-phone">+55 11 4933-1246</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Decolar</td>
+                                <td class="td-desc">Atendimento para agência de viagens OTA autorizada (Decolar).</td>
+                                <td class="td-phone">0800 721 6527<br>+55 31 3507-6615</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Azul Linhas Aéreas</td>
+                                <td class="td-desc">Atendimento e SAC Azul (reacomodações e check-in).</td>
+                                <td class="td-phone">4003 1118<br>0800 887 1118</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Iberia</td>
+                                <td class="td-desc">Atendimento para check-in e sac da Iberia.</td>
+                                <td class="td-phone">+55 11 3956-5999</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Lufthansa</td>
+                                <td class="td-desc">Atendimento para check-in e sac da Lufthansa.</td>
+                                <td class="td-phone">+55 11 3878 8151<br>+55 21 3500 1471</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Air France</td>
+                                <td class="td-desc">Atendimento para check-in, atendimento e sac da Air France.</td>
+                                <td class="td-phone">0800 724 8352</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">MaxMilhas</td>
+                                <td class="td-desc">Atendimento OTA MaxMilhas.</td>
+                                <td class="td-phone">+55 31 9468-0046</td>
+                            </tr>
+                            <tr>
+                                <td class="td-name">Vueling Airlines</td>
+                                <td class="td-desc">Atendimento parceira Vueling.</td>
+                                <td class="td-phone">+34 931 51 81 58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+
+            <!-- ABA 6: SCRIPTS -->
+            <section id="scripts" class="tab-content">
+                <div class="section-header">
+                    <h2>Scripts Oficiais para Chat/Zendesk</h2>
+                </div>
+                
+                <!-- PAINEL DE PERSONALIZAÇÃO INTELIGENTE -->
+                <div class="personalization-panel">
+                    <h4>
+                        <svg viewBox="0 0 24 24" style="width: 20px; fill: white;"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/></svg>
+                        Preenchimento Automático
+                    </h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px; color: #e0e5eb;">Insira o seu nome e o nome do passageiro abaixo. Todos os textos dos scripts serão atualizados imediatamente nos campos de texto correspondentes.</p>
+                    <div class="input-group">
+                        <input type="text" id="inputAgent" placeholder="Seu Nome (Agente)" oninput="updateScripts()">
+                        <input type="text" id="inputClient" placeholder="Nome do Cliente" oninput="updateScripts()">
+                    </div>
+                </div>
+
+
+                <div class="search-scope">
+                    
+                    <!-- SESSÃO: ATENDIMENTO INICIAL -->
+                    <h3 style="color: var(--latam-blue); font-size: 1.1rem; margin: 30px 0 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px;">📍 Atendimento Padrão</h3>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                👋 1. Boas Vindas
+                                <span class="script-timing">Tempo ideal: Início imediato do Chat (Envio ao receber o cliente).</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script1')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script1" data-template="Olá, {PAX}! Seja bem-vindo(a) ao atendimento LATAM.
+Eu sou a {AGENTE} e estou aqui para te ajudar.
+
+
+Para começarmos e eu localizar sua reserva com segurança, você poderia me passar o seu CPF e o seu código da reserva (Localizador)? Me conte também, em poucas palavras, como posso te ajudar hoje.">Olá, [NOME DO CLIENTE]! Seja bem-vindo(a) ao atendimento LATAM.
+Eu sou a [SEU NOME] e estou aqui para te ajudar.
+
+
+Para começarmos e eu localizar sua reserva com segurança, você poderia me passar o seu CPF e o seu código da reserva (Localizador)? Me conte também, em poucas palavras, como posso te ajudar hoje.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                ⏳ 2. Aviso de Inatividade (Pendência)
+                                <span class="script-timing">Tempo ideal: 2 minutos de silêncio do cliente após a sua pergunta.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script2')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script2" data-template="{PAX}, entendo que esteja indisponível no momento. Caso não haja resposta nos próximos minutos, este atendimento ficará pendente. 
+
+
+Se ainda precisar de apoio, basta nos enviar uma nova mensagem e você retornará à fila para seguirmos com sua solicitação.">{NOME DO CLIENTE}, entendo que esteja indisponível no momento. Caso não haja resposta nos próximos minutos, este atendimento ficará pendente. 
+
+
+Se ainda precisar de apoio, basta nos enviar uma nova mensagem e você retornará à fila para seguirmos com sua solicitação.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🛑 3. Encerramento por Inatividade Total
+                                <span class="script-timing">Tempo ideal: Após 5 minutos de silêncio do cliente contados da mensagem anterior.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script3')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script3" data-template="{PAX}, como não recebemos novas mensagens, vamos encerrar este atendimento por enquanto. 
+
+
+Mas não se preocupe: quando quiser retomar, é só nos chamar por aqui novamente. A LATAM agradece o seu contato e deseja um ótimo dia!">{NOME DO CLIENTE}, como não recebemos novas mensagens, vamos encerrar este atendimento por enquanto. 
+
+
+Mas não se preocupe: quando quiser retomar, é só nos chamar por aqui novamente. A LATAM agradece o seu contato e deseja um ótimo dia!</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                ✅ 4. Confirmação de Solução (Antes de Finalizar)
+                                <span class="script-timing">Tempo ideal: Logo após resolver a tratativa ou dúvida do cliente.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script4')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script4" data-template="{PAX}, antes de finalizar, gostaria de confirmar se sua solicitação foi 100% atendida.
+Ficou alguma dúvida ou há algo mais em que eu possa ajudar neste momento?">{NOME DO CLIENTE}, antes de finalizar, gostaria de confirmar se sua solicitação foi 100% atendida.
+Ficou alguma dúvida ou há algo mais em que eu possa ajudar neste momento?</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🌟 5. Encerramento Normal (CSAT Padrão)
+                                <span class="script-timing">Tempo ideal: Após a confirmação final do cliente, encerrando a conversa amigavelmente.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script5')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script5" data-template="Obrigada pelo contato, {PAX}! 
+Em até 48h, você receberá um e-mail para avaliação do meu atendimento. Seus comentários ajudam diretamente no meu desenvolvimento. Avalie apenas meu atendimento, por favor. 
+
+
+A LATAM Airlines Brasil deseja uma excelente semana!">Obrigada pelo contato, [NOME DO CLIENTE]! 
+Em até 48h, você receberá um e-mail para avaliação do meu atendimento. Seus comentários ajudam diretamente no meu desenvolvimento. Avalie apenas meu atendimento, por favor. 
+
+
+A LATAM Airlines Brasil deseja uma excelente semana!</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🏆 6. Encerramento (Decolagem Premiada)
+                                <span class="script-timing">Tempo ideal: Ao encerrar (Se estiver participando da Campanha Interna Decolagem Premiada).</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script6')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script6" data-template="{PAX}, posso te pedir um favor? Estou participando de uma campanha interna e sua avaliação sobre o meu atendimento é muito importante para mim. 
+
+
+Em até 48 horas, você receberá um e-mail para compartilhar sua opinião e comentários, que contribuem enormemente para o meu desenvolvimento. 
+
+
+A LATAM Airlines Brasil deseja a você uma excelente semana e ótimas viagens!">{NOME DO CLIENTE}, posso te pedir um favor? Estou participando de uma campanha interna e sua avaliação sobre o meu atendimento é muito importante para mim. 
+
+
+Em até 48 horas, você receberá um e-mail para compartilhar sua opinião e comentários, que contribuem enormemente para o meu desenvolvimento. 
+
+
+A LATAM Airlines Brasil deseja a você uma excelente semana e ótimas viagens!</div>
+                        </div>
+                    </div>
+
+
+                    <!-- SESSÃO: ZENDESK E CONCESSÕES -->
+                    <h3 style="color: var(--latam-blue); font-size: 1.1rem; margin: 30px 0 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px;">📁 Zendesk e Resoluções</h3>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                📌 7. Escalonamento e Criação de Caso Zendesk
+                                <span class="script-timing">Tempo ideal: Quando necessitar subir análise para outro setor/BKO e pedir documentos.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script7')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script7" data-template="{PAX}, obrigado por aguardar! Foi criado o protocolo de caso nº [XXXXXXXX]. 
+A criação desse caso foi necessária para que possamos prosseguir com a solicitação interna com a equipe responsável.
+
+
+É necessário que responda o e-mail que chegará, sem alterar o assunto, com todas as informações e documentos solicitados no prazo de 7 dias. Caso não consiga visualizar a mensagem na caixa de entrada, oriento que verifique o spam do e-mail.">{NOME DO CLIENTE}, obrigado por aguardar! Foi criado o protocolo de caso nº [XXXXXXXX]. 
+A criação desse caso foi necessária para que possamos prosseguir com a solicitação interna com a equipe responsável.
+
+
+É necessário que responda o e-mail que chegará, sem alterar o assunto, com todas as informações e documentos solicitados no prazo de 7 dias. Caso não consiga visualizar a mensagem na caixa de entrada, oriento que verifique o spam do e-mail.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🙏 8. Desculpas por Intercorrência
+                                <span class="script-timing">Tempo ideal: Ao identificar erros, perdas ou situações desgastantes geradas pela operação.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script8')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script8" data-template="{PAX}, entendemos totalmente o quão essa situação tenha sido desagradável. Aproveitamos a oportunidade para pedir-lhe as mais sinceras e cordiais desculpas com relação ao ocorrido. Nossa prioridade agora é corrigir isso.">{NOME DO CLIENTE}, entendemos totalmente o quão essa situação tenha sido desagradável. Aproveitamos a oportunidade para pedir-lhe as mais sinceras e cordiais desculpas com relação ao ocorrido. Nossa prioridade agora é corrigir isso.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                📎 9. Envio de Documentos Anexos
+                                <span class="script-timing">Tempo ideal: Ao gerar recibos de emissão EMD, declarações ou Atestados via chat.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script9')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script9" data-template="{PAX}, envio em anexo o documento oficial [NOME DO DOCUMENTO]. 
+Vale ressaltar que este documento só é válido para acesso e verificação mediante a apresentação obrigatória do seu cartão de embarque.">{NOME DO CLIENTE}, envio em anexo o documento oficial [NOME DO DOCUMENTO]. 
+Vale ressaltar que este documento só é válido para acesso e verificação mediante a apresentação obrigatória do seu cartão de embarque.</div>
+                        </div>
+                    </div>
+
+
+                    <!-- SESSÃO: PAGAMENTOS -->
+                    <h3 style="color: var(--latam-blue); font-size: 1.1rem; margin: 30px 0 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px;">💳 Pagamentos e Biometria</h3>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🪪 10. Pagamento: Coleta de Dados do Cartão
+                                <span class="script-timing">Tempo ideal: Ao finalizar o orçamento e proceder para emissão via Allegro/Agente.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script10')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script10" data-template="{PAX}, por gentileza, envie os dados para processamento do pagamento (sem usar pontos, espaços ou hífens): 
+
+
+🏙 Endereço Completo, Cidade e Estado:
+📍 CEP:
+🏦 Banco emissor do cartão:
+⏳ Validade do cartão:
+👤 Nome (exatamente como descrito no cartão):
+🆔 CPF do Titular do Cartão:
+
+
+⚠️ Aviso: Para a aprovação segura no sistema, preciso dos dados idênticos aos registrados no cartão.">{NOME DO CLIENTE}, por gentileza, envie os dados para processamento do pagamento (sem usar pontos, espaços ou hífens): 
+
+
+🏙️ Endereço Completo, Cidade e Estado:
+📍 CEP:
+🏦 Banco emissor do cartão:
+⏳ Validade do cartão:
+👤 Nome (exatamente como descrito no cartão):
+🆔 CPF do Titular do Cartão:
+
+
+⚠️ Aviso: Para a aprovação segura no sistema, preciso dos dados idênticos aos registrados no cartão.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                📲 11. Pagamento: Geração do Link WhatsApp
+                                <span class="script-timing">Tempo ideal: Pagamentos externos (quando o cliente precisa pagar à distância sem passar dados).</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script11')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script11" data-template="{PAX}, por favor, me envie os dados do titular do cartão para gerar o link de pagamento seguro que chegará via WhatsApp:
+
+
+👤 Nome completo do titular:
+🆔 CPF do titular (sem pontos e hífens):
+✉️ E-mail:
+📱 Número de WhatsApp:
+
+
+⚠️ Obs.: O pagamento via link está disponível apenas com cartão de crédito nacional. Assim que receber os dados, já gero o link para você!">{NOME DO CLIENTE}, por favor, me envie os dados do titular do cartão para gerar o link de pagamento seguro que chegará via WhatsApp:
+
+
+👤 Nome completo do titular:
+🆔 CPF do titular (sem pontos e hífens):
+✉ E-mail:
+📱 Número de WhatsApp:
+
+
+⚠️ Obs.: O pagamento via link está disponível apenas com cartão de crédito nacional. Assim que receber os dados, já gero o link para você!</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                ⏱️ 12. Pagamento: Aviso de Link Enviado
+                                <span class="script-timing">Tempo ideal: Imediatamente após gerar e enviar o link no número do cliente.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script12')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script12" data-template="{PAX}, acabei de enviar o link de pagamento pelo WhatsApp. 
+
+
+⚠️ Atenção: o link expira em 5 minutos. 
+Assim que realizar o pagamento, por favor, me avise por aqui para darmos sequência e eu gerar o seu bilhete. Fico no aguardo da confirmação!">{NOME DO CLIENTE}, acabei de enviar o link de pagamento pelo WhatsApp. 
+
+
+⚠️ Atenção: o link expira em 5 minutos. 
+Assim que realizar o pagamento, por favor, me avise por aqui para darmos sequência e eu gerar o seu bilhete. Fico no aguardo da confirmação!</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                📸 13. Solicitação de Biometria Facial
+                                <span class="script-timing">Tempo ideal: Aprovações financeiras grandes ou procedimentos que acusam risco de fraude.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script13')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script13" data-template="{PAX}, para darmos continuidade com total segurança e prevenção à fraude, precisamos realizar a sua validação biométrica facial oficial. 
+
+
+Por favor, confira os dados abaixo e me avise se houver algum erro:
+👤 Nome: {PAX}
+✉️ E-mail: [DIGITE O EMAIL]
+📱 Telefone: [DIGITE O TELEFONE]
+
+
+Se as informações estiverem corretas, o link para a biometria já foi enviado para o seu WhatsApp e SMS. Fico no aguardo! Assim que concluir, por favor, me envie um 'Ok' aqui no chat para que eu possa finalizar a emissão.">{NOME DO CLIENTE}, para darmos continuidade com total segurança e prevenção à fraude, precisamos realizar a sua validação biométrica facial oficial. 
+
+
+Por favor, confira os dados abaixo e me avise se houver algum erro:
+👤 Nome: [NOME DO CLIENTE]
+✉️ E-mail: [DIGITE O EMAIL]
+📱 Telefone: [DIGITE O TELEFONE]
+
+
+Se as informações estiverem corretas, o link para a biometria já foi enviado para o seu WhatsApp e SMS. Fico no aguardo! Assim que concluir, por favor, me envie um 'Ok' aqui no chat para que eu possa finalizar a emissão.</div>
+                        </div>
+                    </div>
+
+
+                    <!-- SESSÃO: COMPRA E EMISSÃO -->
+                    <h3 style="color: var(--latam-blue); font-size: 1.1rem; margin: 30px 0 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px;">✈️ Cotação e Emissão</h3>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🇧🇷 14. Compra/Cotação Nacional
+                                <span class="script-timing">Tempo ideal: Quando o cliente deseja orçar e emitir voo doméstico na hora.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script14')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script14" data-template="{PAX}, por favor, preencha as seguintes informações da viagem para eu localizar as melhores opções:
+
+
+👥 Quantidade de passageiros:
+🛫 Origem:
+🛬 Destino:
+📅 Data (ida e volta, se houver):
+⏰ Preferência de horário (opcional): (Manhã | Tarde | Noite | Sem preferência)
+💼 Tarifa ideal: (ex.: com bagagem, possibilidade de remarcação, melhor preço)
+
+
+Dados do(s) passageiro(s) que vão embarcar:
+👤 Nome completo:
+🎂 Data de nascimento:
+🆔 CPF:
+✉️ E-mail:
+📱 Celular (com DDD/WhatsApp):">{NOME DO CLIENTE}, por favor, preencha as seguintes informações da viagem para eu localizar as melhores opções:
+
+
+👥 Quantidade de passageiros:
+🛫 Origem:
+🛬 Destino:
+📅 Data (ida e volta, se houver):
+⏰ Preferência de horário (opcional): (Manhã | Tarde | Noite | Sem preferência)
+💼 Tarifa ideal: (ex.: com bagagem, possibilidade de remarcação, melhor preço)
+
+
+Dados do(s) passageiro(s) que vão embarcar:
+👤 Nome completo:
+🎂 Data de nascimento:
+🆔 CPF:
+✉️ E-mail:
+📱 Celular (com DDD/WhatsApp):</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🌎 15. Compra/Cotação Internacional
+                                <span class="script-timing">Tempo ideal: Quando o cliente deseja orçar voos para exterior (requer passaporte/DDI).</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script15')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script15" data-template="{PAX}, para viagens internacionais, preencha rigorosamente os dados dos passageiros iguais aos documentos oficiais:
+
+
+👤 Nome completo (exatamente como no passaporte):
+🎂 Data de nascimento (dd/mm/aaaa):
+🆔 CPF:
+✉️ E-mail de contato:
+📱 Celular (com DDI/DDD e WhatsApp):
+🛂 Número do passaporte e país emissor:
+📅 Validade do passaporte (dd/mm/aaaa):">{NOME DO CLIENTE}, para viagens internacionais, preencha rigorosamente os dados dos passageiros iguais aos documentos oficiais:
+
+
+👤 Nome completo (exatamente como no passaporte):
+🎂 Data de nascimento (dd/mm/aaaa):
+🆔 CPF:
+✉️ E-mail de contato:
+📱 Celular (com DDI/DDD e WhatsApp):
+🛂 Número do passaporte e país emissor:
+📅 Validade do passaporte (dd/mm/aaaa):</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🛑 16. Compra com Stopover
+                                <span class="script-timing">Tempo ideal: Cliente deseja conhecer uma cidade de conexão >24h (EX: GRU, BSB, FOR).</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script16')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script16" data-template="{PAX}, para eu encontrar a melhor oferta de Stopover (parada estendida), me envie estas informações. Retorno com as melhores opções em cerca de 15 a 20 minutos:
+
+
+🛫 Origem (ex.: GRU - São Paulo):
+🛬 Destino final (ex.: MIA - Miami):
+📅 Data da ida:
+🏙️ Cidade do Stopover desejado (ex.: Fortaleza):
+⏳ Dias de Stopover que pretende ficar na cidade:
+📅 Data de retorno ao destino final:
+💼 Tipo de tarifa desejada (Light, Standard, Full, Premium Business):
+👥 Passageiros (ex.: 2 adultos, 1 criança):
+⏰ Preferência de horário:
+🧳 Prefere incluir a compra de bagagem despachada de 23kg? (Sim ou Não):">{NOME DO CLIENTE}, para eu encontrar a melhor oferta de Stopover (parada estendida), me envie estas informações. Retorno com as melhores opções em cerca de 15 a 20 minutos:
+
+
+🛫 Origem (ex.: GRU - São Paulo):
+🛬 Destino final (ex.: MIA - Miami):
+📅 Data da ida:
+🏙️ Cidade do Stopover desejado (ex.: Fortaleza):
+⏳ Dias de Stopover que pretende ficar na cidade:
+📅 Data de retorno ao destino final:
+💼 Tipo de tarifa desejada (Light, Standard, Full, Premium Business):
+👥 Passageiros (ex.: 2 adultos, 1 criança):
+⏰ Preferência de horário:
+🧳 Prefere incluir a compra de bagagem despachada de 23kg? (Sim ou Não):</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🐾 17. Solicitação: Pet na Cabine
+                                <span class="script-timing">Tempo ideal: Quando o pax deseja emitir a taxa (R$200) de transporte do animal de estimação.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script17')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script17" data-template="Perfeito, {PAX}! Para cuidarmos do seu pet com a máxima segurança, preciso que me envie os dados estruturados:
+
+
+🐾 Tipo de PET: ( ) GATO  ( ) CACHORRO
+🏷️ Nome e raça:
+⚖️ Peso atual do pet (kg) e idade (meses):
+👜 Como será transportado: ( ) Caixa rígida  ( ) Bolsa flexível
+📏 Informe as dimensões exatas em cm (Comprimento x Largura x Altura):
+✉️ E-mail para contato e envio de confirmação:
+
+
+⚠️ Importante: este serviço é especial, de pagamento à vista e não permite parcelamento.">Perfeito, [NOME DO CLIENTE]! Para cuidarmos do seu pet com a máxima segurança, preciso que me envie os dados estruturados:
+
+
+🐾 Tipo de PET: ( ) GATO  ( ) CACHORRO
+🏷️ Nome e raça:
+⚖️ Peso atual do pet (kg) e idade (meses):
+👜 Como será transportado: ( ) Caixa rígida  ( ) Bolsa flexível
+📏 Informe as dimensões exatas em cm (Comprimento x Largura x Altura):
+✉️ E-mail para contato e envio de confirmação:
+
+
+⚠️ Importante: este serviço é especial, de pagamento à vista e não permite parcelamento.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="script-card">
+                        <div class="script-header">
+                            <h4>
+                                🧒 18. Emissão: Menor Desacompanhado (UMNR)
+                                <span class="script-timing">Tempo ideal: Passagem para 8 a 17 anos onde o responsável paga a taxa de assistência UMNR.</span>
+                            </h4>
+                            <button class="btn-copy" onclick="copyScript('script18')">Copiar Texto</button>
+                        </div>
+                        <div class="script-body">
+                            <div class="script-text" id="script18" data-template="{PAX}, para solicitar o Serviço de Menor Desacompanhado (UMNR), por favor me informe:
+
+
+🎂 Data de Nascimento do Menor (Viagens de 8 a 17 anos):
+⚕ Ele é alérgico? Tem alguma doença crônica ou faz uso de alguma medicação?
+
+
+Dados do Adulto que ENTREGA a criança no aeroporto de Origem:
+👤 Nome Completo:
+🤝 Grau de Parentesco:
+📱 Nº do telefone de contato:
+
+
+Dados do Adulto que RECEBE a criança no aeroporto de Destino:
+👤 Nome Completo:
+🤝 Grau de Parentesco:
+📱 Nº do telefone de contato:
+✉️ Email do responsável:">{NOME DO CLIENTE}, para solicitar o Serviço de Menor Desacompanhado (UMNR), por favor me informe:
+
+
+🎂 Data de Nascimento do Menor (Viagens de 8 a 17 anos):
+⚕️ Ele é alérgico? Tem alguma doença crônica ou faz uso de alguma medicação?
+
+
+Dados do Adulto que ENTREGA a criança no aeroporto de Origem:
+👤 Nome Completo:
+🤝 Grau de Parentesco:
+📱 Nº do telefone de contato:
+
+
+Dados do Adulto que RECEBE a criança no aeroporto de Destino:
+👤 Nome Completo:
+🤝 Grau de Parentesco:
+📱 Nº do telefone de contato:
+✉️ Email do responsável:</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+            <!-- ABA 7: TRADUTOR FONÉTICO (ATUALIZADA) -->
+            <section id="tradutor" class="tab-content">
+                <div class="section-header">
+                    <h2>Tradutor - Alfabeto Fonético (NATO)</h2>
+                </div>
+                
+                <div class="personalization-panel" style="background-color: var(--white); color: var(--text-dark); border: 1px solid var(--border-color);">
+                    <p style="margin-bottom: 20px; color: var(--text-muted); text-align: center;">Digite o <strong>Localizador (Código de Reserva)</strong> de 6 caracteres. A tradução para o Alfabeto Aeronáutico ocorrerá automaticamente ao digitar em cada quadrado.</p>
+                    
+                    <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap;">
+                        <input type="text" id="loc1" class="loc-box" maxlength="1" oninput="updateFonetico(1)" onkeydown="checkBackspace(event, 1)">
+                        <input type="text" id="loc2" class="loc-box" maxlength="1" oninput="updateFonetico(2)" onkeydown="checkBackspace(event, 2)">
+                        <input type="text" id="loc3" class="loc-box" maxlength="1" oninput="updateFonetico(3)" onkeydown="checkBackspace(event, 3)">
+                        <input type="text" id="loc4" class="loc-box" maxlength="1" oninput="updateFonetico(4)" onkeydown="checkBackspace(event, 4)">
+                        <input type="text" id="loc5" class="loc-box" maxlength="1" oninput="updateFonetico(5)" onkeydown="checkBackspace(event, 5)">
+                        <input type="text" id="loc6" class="loc-box" maxlength="1" oninput="updateFonetico(6)" onkeydown="checkBackspace(event, 6)">
+                    </div>
+
+
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <button class="btn-copy" style="background-color: var(--text-muted); padding: 8px 16px;" onclick="limparFonetico()">Limpar Campos</button>
+                    </div>
+
+
+                    <div>
+                        <h4 style="margin-bottom: 10px; color: var(--latam-blue); text-align: center;">Tradução Fonética:</h4>
+                        <div id="resultadoFonetico" style="font-family: 'Consolas', monospace; font-size: 1.4rem; color: var(--latam-red); font-weight: bold; text-align: center; line-height: 1.6; background-color: #f8f9fa; border: 1px solid #eee; padding: 20px; border-radius: 8px; min-height: 85px; display: flex; align-items: center; justify-content: center;">_ _ _ _ _ _</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <footer>
+            <strong>Hub Operacional Suporte Lua</strong> &nbsp;|&nbsp; Latam Airlines Group © 2024 &nbsp;|&nbsp; Uso Interno Restrito
+        </footer>
+    </main>
+
+
+    <div id="toast">✅ Copiado com sucesso!</div>
+
+
+    <script>
+        // Função de navegação (Abas Laterais)
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+            
+            document.getElementById('global-search').value = '';
+            filterAll(); 
+            window.scrollTo(0,0);
+        }
+
+
+        // Função de Busca Global Instantânea (Search Bar)
+        function filterAll() {
+            const input = document.getElementById('global-search').value.toLowerCase();
+            const activeTab = document.querySelector('.tab-content.active');
+            
+            if(!activeTab) return;
+
+
+            const cards = activeTab.querySelectorAll('.card');
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if(text.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+
+            const tableRows = activeTab.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                if(text.includes(input)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+
+            const scripts = activeTab.querySelectorAll('.script-card');
+            scripts.forEach(script => {
+                const text = script.innerText.toLowerCase();
+                if(text.includes(input)) {
+                    script.style.display = 'block';
+                } else {
+                    script.style.display = 'none';
+                }
+            });
+        }
+
+
+        // Função de Preenchimento Dinâmico de Nomes (Painel de Personalização)
+        function updateScripts() {
+            const agentName = document.getElementById('inputAgent').value.trim() || '[SEU NOME]';
+            const clientName = document.getElementById('inputClient').value.trim() || '[NOME DO CLIENTE]';
+
+
+            const scriptElements = document.querySelectorAll('.script-text');
+            scriptElements.forEach(script => {
+                if (script.hasAttribute('data-template')) {
+                    let templateText = script.getAttribute('data-template');
+                    
+                    templateText = templateText.replace(/{AGENTE}/g, agentName);
+                    templateText = templateText.replace(/{PAX}/g, clientName);
+                    
+                    script.innerText = templateText;
+                }
+            });
+        }
+
+
+        // Função para Copiar Textos Específicos
+        function copyScript(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText.trim();
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast();
+            }).catch(err => {
+                alert('Ocorreu um erro ao copiar. Tente selecionar o texto manualmente.');
+            });
+        }
+
+
+        // Aviso visual tipo Toast Notification
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 2500);
+        }
+
+
+        // --- SISTEMA DO TRADUTOR FONÉTICO EM TEMPO REAL --- //
+        const alfabetoFonetico = {
+            'A': 'ALFA', 'B': 'BRAVO', 'C': 'CHARLIE', 'D': 'DELTA', 'E': 'ECHO', 'F': 'FOXTROT',
+            'G': 'GOLF', 'H': 'HOTEL', 'I': 'INDIA', 'J': 'JULIET', 'K': 'KILO', 'L': 'LIMA',
+            'M': 'MIKE', 'N': 'NOVEMBER', 'O': 'OSCAR', 'P': 'PAPA', 'Q': 'QUEBEC', 'R': 'ROMEO',
+            'S': 'SIERRA', 'T': 'TANGO', 'U': 'UNIFORM', 'V': 'VICTOR', 'W': 'WHISKEY', 'X': 'X-RAY',
+            'Y': 'YANKEE', 'Z': 'ZULU'
+        };
+
+
+        function updateFonetico(index) {
+            const currentInput = document.getElementById('loc' + index);
+            currentInput.value = currentInput.value.toUpperCase(); // Força maiúsculo
+            
+            // Avança automaticamente para o próximo quadrado se digitou uma letra
+            if (currentInput.value.length === 1 && index < 6) {
+                document.getElementById('loc' + (index + 1)).focus();
+            }
+
+
+            renderFonetico();
+        }
+
+
+        function checkBackspace(event, index) {
+            const currentInput = document.getElementById('loc' + index);
+            // Se apertar Backspace num campo vazio, volta o cursor pro campo anterior
+            if (event.key === 'Backspace' && currentInput.value === '' && index > 1) {
+                document.getElementById('loc' + (index - 1)).focus();
+            }
+        }
+
+
+        function renderFonetico() {
+            let resultadoArray = [];
+            let todosVazios = true;
+
+
+            for (let i = 1; i <= 6; i++) {
+                let val = document.getElementById('loc' + i).value;
+                if (val !== '') todosVazios = false;
+                
+                if (val && alfabetoFonetico[val]) {
+                    resultadoArray.push(alfabetoFonetico[val]); // Traduz letra
+                } else if (val) {
+                    resultadoArray.push(val); // Mantém número
+                } else {
+                    resultadoArray.push('_'); // Campo vazio
+                }
+            }
+
+
+            if (todosVazios) {
+                document.getElementById('resultadoFonetico').innerText = '_ _ _ _ _ _';
+            } else {
+                // Mostra as palavras separadas por um pontinho para ficar elegante
+                document.getElementById('resultadoFonetico').innerText = resultadoArray.join(' • ');
+            }
+        }
+
+
+        function limparFonetico() {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById('loc' + i).value = '';
+            }
+            renderFonetico();
+            document.getElementById('loc1').focus();
+        }
+    </script>
+</body>
+</html>
