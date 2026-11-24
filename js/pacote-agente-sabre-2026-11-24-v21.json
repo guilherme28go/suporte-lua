@@ -1,0 +1,4740 @@
+{
+  "formato": "agente-sabre-pacote",
+  "versao": 2,
+  "gerado_em": "2026-11-24T09:25:48.975Z",
+  "regras": [
+    {
+      "tipo": "acao",
+      "chave": "AS",
+      "titulo": "Segmento Adicionado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "XS",
+      "titulo": "Segmento Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "MS",
+      "titulo": "Segmento Modificado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "SC",
+      "titulo": "Schedule Change",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A4S",
+      "titulo": "SSR Acrescentado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X4S",
+      "titulo": "SSR Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A4O",
+      "titulo": "OSI Acrescentado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X4O",
+      "titulo": "OSI Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A5H",
+      "titulo": "Remark Acrescentado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X5H",
+      "titulo": "Remark Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A4G",
+      "titulo": "Assento Adicionado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X4G",
+      "titulo": "Assento Removido",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A5T",
+      "titulo": "Remark Acrescentado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X5T",
+      "titulo": "Remark Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "A3O",
+      "titulo": "OSI Acrescentado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 150,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "X3O",
+      "titulo": "OSI Cancelado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 160,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "AAX",
+      "titulo": "Serviço Adicionado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 170,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "XAX",
+      "titulo": "Serviço Removido",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 180,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "UAX",
+      "titulo": "Serviço Atualizado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 190,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "ASH",
+      "titulo": "Remark/Aviso Inserido",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 200,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "AST",
+      "titulo": "Queue Adicionada",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 210,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "AT",
+      "titulo": "Texto Adicionado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 220,
+      "ativo": true
+    },
+    {
+      "tipo": "acao",
+      "chave": "XT",
+      "titulo": "Texto Removido",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 230,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "SSA",
+      "titulo": "Salvador",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -12.91,
+        "lon": -38.33
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "GRU",
+      "titulo": "Guarulhos",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.43,
+        "lon": -46.47
+      },
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CGH",
+      "titulo": "Congonhas",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.63,
+        "lon": -46.66
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "GIG",
+      "titulo": "Galeão",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -22.81,
+        "lon": -43.25
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "SDU",
+      "titulo": "Santos Dumont",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -22.91,
+        "lon": -43.16
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "BSB",
+      "titulo": "Brasília",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -15.87,
+        "lon": -47.92
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "FOR",
+      "titulo": "Fortaleza",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -3.78,
+        "lon": -38.53
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "REC",
+      "titulo": "Recife",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -8.13,
+        "lon": -34.92
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MCZ",
+      "titulo": "Maceió",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -9.51,
+        "lon": -35.79
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "POA",
+      "titulo": "Porto Alegre",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -29.99,
+        "lon": -51.17
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CWB",
+      "titulo": "Curitiba",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -25.53,
+        "lon": -49.18
+      },
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "FLN",
+      "titulo": "Florianópolis",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -27.67,
+        "lon": -48.55
+      },
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MAO",
+      "titulo": "Manaus",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -3.04,
+        "lon": -60.05
+      },
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "BEL",
+      "titulo": "Belém",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -1.38,
+        "lon": -48.48
+      },
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "VIX",
+      "titulo": "Vitória",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -20.26,
+        "lon": -40.29
+      },
+      "ordem": 150,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "NAT",
+      "titulo": "Natal",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -5.91,
+        "lon": -35.25
+      },
+      "ordem": 160,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "JPA",
+      "titulo": "João Pessoa",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -7.15,
+        "lon": -34.95
+      },
+      "ordem": 170,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "THE",
+      "titulo": "Teresina",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -5.06,
+        "lon": -42.82
+      },
+      "ordem": 180,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "SLZ",
+      "titulo": "São Luís",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -2.59,
+        "lon": -44.24
+      },
+      "ordem": 190,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "AJU",
+      "titulo": "Aracaju",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -10.98,
+        "lon": -37.07
+      },
+      "ordem": 200,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "PMW",
+      "titulo": "Palmas",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -10.29,
+        "lon": -48.36
+      },
+      "ordem": 210,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CGB",
+      "titulo": "Cuiabá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -15.65,
+        "lon": -56.12
+      },
+      "ordem": 220,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "VCP",
+      "titulo": "Campinas",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.01,
+        "lon": -47.13
+      },
+      "ordem": 230,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "GYN",
+      "titulo": "Goiânia",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -16.63,
+        "lon": -49.22
+      },
+      "ordem": 240,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "JDO",
+      "titulo": "Juazeiro do Norte",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -7.22,
+        "lon": -39.27
+      },
+      "ordem": 250,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "IMP",
+      "titulo": "Imperatriz",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -5.53,
+        "lon": -47.46
+      },
+      "ordem": 260,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "PNZ",
+      "titulo": "Petrolina",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -9.36,
+        "lon": -40.57
+      },
+      "ordem": 270,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LDB",
+      "titulo": "Londrina",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.33,
+        "lon": -51.13
+      },
+      "ordem": 280,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MGF",
+      "titulo": "Maringá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.48,
+        "lon": -52.02
+      },
+      "ordem": 290,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "XAP",
+      "titulo": "Chapecó",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -27.13,
+        "lon": -52.66
+      },
+      "ordem": 300,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "SCL",
+      "titulo": "Santiago",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -33.39,
+        "lon": -70.79
+      },
+      "ordem": 310,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LIM",
+      "titulo": "Lima",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -12.02,
+        "lon": -77.11
+      },
+      "ordem": 320,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "BOG",
+      "titulo": "Bogotá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 4.7,
+        "lon": -74.14
+      },
+      "ordem": 330,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "UIO",
+      "titulo": "Quito",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -0.13,
+        "lon": -78.36
+      },
+      "ordem": 340,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "EZE",
+      "titulo": "Buenos Aires Ezeiza",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -34.82,
+        "lon": -58.54
+      },
+      "ordem": 350,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "AEP",
+      "titulo": "Buenos Aires Aeroparque",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -34.56,
+        "lon": -58.42
+      },
+      "ordem": 360,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MVD",
+      "titulo": "Montevidéu",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -34.84,
+        "lon": -56.03
+      },
+      "ordem": 370,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "ASU",
+      "titulo": "Assunção",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -25.24,
+        "lon": -57.52
+      },
+      "ordem": 380,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "PTY",
+      "titulo": "Panamá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 9.07,
+        "lon": -79.38
+      },
+      "ordem": 390,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MIA",
+      "titulo": "Miami",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 25.79,
+        "lon": -80.29
+      },
+      "ordem": 400,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "JFK",
+      "titulo": "Nova York",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 40.64,
+        "lon": -73.78
+      },
+      "ordem": 410,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LAX",
+      "titulo": "Los Angeles",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 33.94,
+        "lon": -118.41
+      },
+      "ordem": 420,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "ORD",
+      "titulo": "Chicago",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 41.98,
+        "lon": -87.9
+      },
+      "ordem": 430,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "ATL",
+      "titulo": "Atlanta",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 33.64,
+        "lon": -84.43
+      },
+      "ordem": 440,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MAD",
+      "titulo": "Madrid",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 40.49,
+        "lon": -3.57
+      },
+      "ordem": 450,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LIS",
+      "titulo": "Lisboa",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 38.77,
+        "lon": -9.13
+      },
+      "ordem": 460,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CDG",
+      "titulo": "Paris",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 49.01,
+        "lon": 2.55
+      },
+      "ordem": 470,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LHR",
+      "titulo": "Londres",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 51.47,
+        "lon": -0.45
+      },
+      "ordem": 480,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "FCO",
+      "titulo": "Roma",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 41.8,
+        "lon": 12.25
+      },
+      "ordem": 490,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "RBR",
+      "titulo": "Rio Branco",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -9.87,
+        "lon": -67.9
+      },
+      "ordem": 500,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MAN",
+      "titulo": "Manaus (MAO)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -3.04,
+        "lon": -60.05
+      },
+      "ordem": 510,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "PVH",
+      "titulo": "Porto Velho",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -8.71,
+        "lon": -63.9
+      },
+      "ordem": 520,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CIZ",
+      "titulo": "Coari",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -4.13,
+        "lon": -63.13
+      },
+      "ordem": 530,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "NAV",
+      "titulo": "Navegantes",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -26.88,
+        "lon": -48.65
+      },
+      "ordem": 540,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "SAO",
+      "titulo": "São Paulo (todos os aeroportos)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -23.55,
+        "lon": -46.63
+      },
+      "ordem": 550,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "noshow",
+      "titulo": "NO SHOW DETECTADO",
+      "descricao": "Passageiro não embarcou. Verifique multas e regras tarifárias da reserva.",
+      "cor": "alert-red",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn"
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "hdExpirado",
+      "titulo": "HD EXPIRADO (FALTA DE PAGAMENTO)",
+      "descricao": "Houve cancelamento por HD expirado (CNL DUE AE HD EXPIRED): o assento em espera não foi pago a tempo.",
+      "cor": "alert-red",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "bot"
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "reemissao",
+      "titulo": "REEMISSÃO APROVADA",
+      "descricao": "Remark VMP: reemissão aprovada em {valor}.",
+      "cor": "alert-green",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "ndc",
+      "titulo": "AGÊNCIA EXTERNA / NDC",
+      "descricao": "NDC é o sistema que as agências de viagem usam para emitir bilhetes com a LATAM. O NDC sozinho não indica agência: só vale como agência depois da emissão (primeira assinatura). Se houver agência externa, não altere sem autorização.",
+      "cor": "alert-yellow",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn"
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "elite",
+      "titulo": "CLIENTE ELITE / LATAMPASS",
+      "descricao": "Passageiro com programa de fidelidade. Verifique benefícios de bagagem e assento.",
+      "cor": "alert-green",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "star"
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "protecao",
+      "titulo": "PROTEÇÃO AUTOMÁTICA ATIVA",
+      "descricao": "Robô AUTOREACOM ou ARU atuou nesta reserva. Verifique marcas INVOL CHG e PNR WORKED ARU.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "codeshare_lx",
+      "titulo": "CODESHARE SWISS (LX) DETECTADO",
+      "descricao": "Acordo somente com LATAM Brasil (bilhetes 045). INF/CHD/UMNR/Gestante/DEPA/AVIH/ESAN NÃO permitidos no voo marketing.",
+      "cor": "alert-yellow",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn"
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "trocaClasse",
+      "titulo": "TROCA DE CLASSE (SEM INVOLUNTÁRIA)",
+      "descricao": "Mesmo voo/data com letra de classe diferente (ex.: N para V). A classe organiza as poltronas/tarifa e, sozinha, NÃO dá direito a involuntária.",
+      "cor": "alert-yellow",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn",
+        "requer_codigo": true
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "alerta",
+      "chave": "papelP",
+      "titulo": "BILHETE EM PAPEL (/P) NÃO EMITIMOS",
+      "descricao": "Emissão em /P (papel) é exclusiva do aeroporto. Nós só emitimos bilhete eletrônico (/E).",
+      "cor": "alert-yellow",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn",
+        "requer_codigo": true
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "assento_attr",
+      "chave": "NW",
+      "titulo": "Janela",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "assento_attr",
+      "chave": "NA",
+      "titulo": "Corredor",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "assento_attr",
+      "chave": "N",
+      "titulo": "Sem característica",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "assento_attr",
+      "chave": "LP",
+      "titulo": "Alteração sem autorização do passageiro",
+      "descricao": "Assento alterado sem autorização do passageiro.",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "assento_attr",
+      "chave": "@",
+      "titulo": "Assento derrubado pelo sistema",
+      "descricao": "O sistema derrubou o assento e adicionou outro.",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Revalidação automática",
+      "descricao": "Serviço automático da LATAM. Indica que o passageiro usou a involuntária oferecida pela LATAM no site: ele perde o direito à involuntária dos itinerários anteriores e só volta a ter se a LATAM alterar o itinerário de novo, conforme a regra.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "HDQ8SJ0",
+      "padrao2": "AUTOMATIC REVALIDATION",
+      "extra": {
+        "k": "reval",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "SABRE IX (sistema)",
+      "descricao": "Sistema que confirma ações internas (por exemplo, do Agente 360) ou reescreve de forma organizada alterações feitas por um agente. Não é um agente.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ8KBH",
+      "padrao2": "SABRE IX",
+      "extra": {
+        "k": "ix",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Robô Calidris",
+      "descricao": "Robô de Revenue Integrity. Derruba assento ou segmento por falta de pagamento (HD expirado / sem TKNE) ou por no-show. Se o pagamento já estava feito, pode ser erro operacional do sistema ao derrubar os voos por falta de pagamento.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "HDQ8RIC",
+      "padrao2": "CALIDRIS,REVENUE INTEGRITY",
+      "extra": {
+        "k": "calidris",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Robô FORRIB",
+      "descricao": "Robô da LATAM (conhecido como FORRIB) que faz alterações automáticas na reserva.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "HDQ5RIB",
+      "padrao2": "SABRESONIC",
+      "extra": {
+        "k": "forrib",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "LATAM XP (sistema)",
+      "descricao": "Sistema que confirma internamente os dados do bilhete com os voos e grava o SSR LAXP.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ5L*S",
+      "padrao2": "LATAM XP",
+      "extra": {
+        "k": "xp",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Call Center LATAM",
+      "descricao": "Assinatura iniciada em QOC ou JDO: agente de Call Center.",
+      "cor": "b-teal",
+      "modo": "contem",
+      "padrao": "QOC,JDO",
+      "padrao2": "",
+      "extra": {
+        "k": "cc",
+        "robo": false,
+        "grupo": "cc"
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "CPC (Contingência)",
+      "descricao": "Assinatura iniciada em MVD: Centro do Passageiro em Contingência. Pode fazer qualquer alteração e dá ao passageiro o direito de seguir com a involuntária.",
+      "cor": "b-purple",
+      "modo": "contem",
+      "padrao": "MVD",
+      "padrao2": "",
+      "extra": {
+        "k": "cpc",
+        "robo": false,
+        "grupo": "cpc"
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Site oficial LATAM",
+      "descricao": "Alteração feita pelo site/app oficial da LATAM (SSW). Não é agência.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "HDQ5RV1,UHO",
+      "padrao2": "",
+      "extra": {
+        "k": "site",
+        "robo": false,
+        "grupo": "site"
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Reacomodação prioritária",
+      "descricao": "Sistema reacomodou o passageiro (assentos). O motivo exato não aparece no histórico.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "PRIORITY REACCOMMODATION",
+      "extra": {
+        "k": "reacom",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Site oficial LATAM",
+      "descricao": "Alteração feita pelo site/app oficial da LATAM (SSW). Não é agência.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "SSW,MISCWS",
+      "extra": {
+        "k": "site",
+        "robo": false,
+        "grupo": "site",
+        "sem_assinatura": true
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Outra companhia aérea (TTY)",
+      "descricao": "Assinatura TTY: outra companhia aérea alterou o itinerário (teletipo). O código depois de TTYRM indica quem mexeu (ex.: AM = Aeroméxico, WS = WestJet, 1A = Amadeus). Não é agência nem robô LATAM.",
+      "cor": "b-purple",
+      "modo": "contem",
+      "padrao": "TTYRM",
+      "padrao2": "",
+      "extra": {
+        "k": "tty",
+        "robo": false,
+        "grupo": "oa"
+      },
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "ax_status",
+      "chave": "HD",
+      "titulo": "Aguardando pagamento",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "ax_status",
+      "chave": "HI",
+      "titulo": "Emitido e pago",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "ax_status",
+      "chave": "HK",
+      "titulo": "Confirmado",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "ax_status",
+      "chave": "KK",
+      "titulo": "Confimado com pendência no pagamento",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "reval",
+      "titulo": "Involuntária já utilizada (revalidação automática)",
+      "descricao": "Assinatura {sig} em {dt}: o passageiro usou a involuntária oferecida pela LATAM no site. Perde o direito à involuntária dos itinerários anteriores; só volta a ter se a LATAM alterar o itinerário de novo, conforme a regra.",
+      "cor": "alert-yellow",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "warn",
+        "sig_padrao": "HDQ8SJ0"
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "cpc",
+      "titulo": "Alteração feita pelo CPC (Contingência)",
+      "descricao": "Assinatura {sig} em {dt}: o CPC pode fazer qualquer alteração e dá ao passageiro o direito de seguir com a involuntária.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "screac",
+      "titulo": "Reacomodação do sistema (SC.REAC)",
+      "descricao": "O sistema reacomodou a reserva em {dt}: o segmento antigo sai (XS) e o novo entra (AS/SC), seguindo a mesma lógica.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "reacom",
+      "titulo": "Reacomodação prioritária de assentos",
+      "descricao": "Em {dt} o sistema mudou assentos (PRIORITY REACCOMMODATION). O histórico não informa o motivo exato.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "calidris",
+      "titulo": "Calidris atuou na reserva",
+      "descricao": "Robô de Revenue Integrity em {dt}: derruba assento/segmento por falta de pagamento (HD expirado ou sem TKNE) ou por no-show. Se o pagamento já estava feito, pode ser erro operacional do sistema ao derrubar os voos por falta de pagamento.",
+      "cor": "alert-red",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "bot"
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "forrib",
+      "titulo": "Robô FORRIB atuou na reserva",
+      "descricao": "Robô da LATAM (FORRIB, {sig}) fez alterações em {dt}.",
+      "cor": "alert-red",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "bot",
+        "se_ausente": "calidris"
+      },
+      "ordem": 51,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "site",
+      "titulo": "Houve alteração pelo site oficial LATAM",
+      "descricao": "Assinatura {sig} (SSW): não é agência.",
+      "cor": "alert-green",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info",
+        "sig_padrao": "do site"
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "cc",
+      "titulo": "Houve atendimento do Call Center",
+      "descricao": "Assinatura {sig} (QOC/JDO) em {dt}.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "tty",
+      "titulo": "Itinerário alterado por outra companhia (TTY)",
+      "descricao": "Em {dt} outra companhia aérea alterou o itinerário (teletipo, assinatura {sig}).",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "ob",
+      "titulo": "Confirmação pendente (OB)",
+      "descricao": "Em {dt} o segmento foi marcado como OB: o sistema confirma mais tarde (alteração no site ou mudança de classe pelo CEPNR). Não é overbooking.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info",
+        "requer_codigo": true
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "lp",
+      "titulo": "Assento alterado sem autorização do passageiro (LP)",
+      "descricao": "Em {dt} o assento foi alterado sem autorização do passageiro.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info",
+        "requer_codigo": true
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "indicio",
+      "chave": "hkNaoPax",
+      "titulo": "Itinerário confirmado (HK) não prova aceite do passageiro",
+      "descricao": "HK indica itinerário confirmado, não necessariamente pelo passageiro.",
+      "cor": "alert-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "icone": "info",
+        "requer_codigo": true
+      },
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "osi",
+      "chave": "",
+      "titulo": "Reacomodação por alteração de malha (SC.REAC)",
+      "descricao": "Sistema reacomodou o passageiro após uma alteração de horário (schedule change).",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "SC.REAC",
+      "padrao2": "",
+      "extra": {
+        "screac": true
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "osi",
+      "chave": "",
+      "titulo": "Reserva de resgate de pontos (redemption)",
+      "descricao": "Passageiro com bilhete de resgate (LATAM Pass).",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "REDEMPTION",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "osi",
+      "chave": "",
+      "titulo": "Passageiro com assento pré-pago (MCO)",
+      "descricao": "Há restrições em caso de alteração ou reembolso do assento pré-pago.",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "PREPAID SEAT MCO",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Antifraude: CEP e endereço conferem",
+      "descricao": "",
+      "cor": "",
+      "modo": "comeca",
+      "padrao": "AUTH-POSTAL CODE AND ADDRESS MATCHED",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Verificação",
+            "v": "CEP e endereço do cartão conferem"
+          }
+        ]
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Antifraude: CVC confere",
+      "descricao": "",
+      "cor": "",
+      "modo": "comeca",
+      "padrao": "AUTH-CVC MATCHED",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Verificação",
+            "v": "CVC do cartão confere"
+          }
+        ]
+      },
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Ponto de venda (POS-BT)",
+      "descricao": "",
+      "cor": "",
+      "modo": "comeca",
+      "padrao": "POS-BT",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "POS",
+            "v": "$0"
+          }
+        ]
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Aviso: pagar os serviços (assentos) em até 48h",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "PLEASE ADV ANCILLARIES BEFORE 48 HRS OR AUTO CANCEL",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "flag": "aviso48",
+        "icone": "bot",
+        "campos": [
+          {
+            "l": "Aviso",
+            "v": "Informe/pague os ancillaries antes de 48h ou haverá cancelamento automático"
+          }
+        ]
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Cancelado: HD expirado (falta de pagamento)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "CNL DUE AE HD EXPIRED",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "flag": "hdExpirado",
+        "icone": "bot",
+        "campos": [
+          {
+            "l": "Motivo",
+            "v": "Assento em espera (HD) expirou sem pagamento (AE)",
+            "vcls": "v-err"
+          }
+        ]
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Nome do pagador (NMP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^NMP/(.+)$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "user",
+        "campos": [
+          {
+            "l": "Nome do pagador",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Pagamento no cartão de crédito",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "WF\\*([A-Z]{2})[0-9X]+?(\\d{4})/(\\d{2})(\\d{2})\\*EP(\\d+)\\*Z(\\d+)",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Bandeira (código)",
+            "v": "$1"
+          },
+          {
+            "l": "Final do cartão",
+            "v": "$2"
+          },
+          {
+            "l": "Validade",
+            "v": "$3/$4"
+          },
+          {
+            "l": "EP",
+            "v": "$5"
+          },
+          {
+            "l": "Autorização (Z)",
+            "v": "$6"
+          }
+        ]
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Split de reserva (nova reserva)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "SPLIT TO/(\\d+)/(\\d{2}[A-Z]{3}\\d{2})\\s+([A-Z0-9]{6})",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Nova reserva (PNR)",
+            "v": "$3"
+          },
+          {
+            "l": "Hora/Data do split",
+            "v": "$1 em $2"
+          }
+        ]
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Erro de pagamento: backup EXB",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "BACKUP ERROR EXB",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "warn",
+        "campos": [
+          {
+            "l": "Problema",
+            "v": "Falha no backup de pagamento/EMD (BACKUP ERROR EXB)",
+            "vcls": "v-err"
+          }
+        ]
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Pagamento no cartão (código de autorização)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "PAGO CC COD AUTH (\\d+)",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Código de autorização",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Código autorizador do pagamento (B-)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "B-(\\d{6,})",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Código autorizador",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Configuração de pagamento exclusiva de EMD",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "OPTSTAT-[A-Z]{2}",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Uso",
+            "v": "Configuração de pagamento exclusiva de EMD"
+          }
+        ]
+      },
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "E-mail enviado ao passageiro (AEM)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^\\s*AEM\\s",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Significado",
+            "v": "O agente enviou as informações da reserva ao passageiro usando o e-mail cadastrado."
+          }
+        ]
+      },
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Código de confirmação de pagamento (ADM)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^\\s*ADM\\s",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Uso",
+            "v": "Código de confirmação de pagamento"
+          }
+        ]
+      },
+      "ordem": 150,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "CALIDRIS",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "FOR RIB",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "FOR KHB",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "FORRIB",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "LATAM AUTOMATIC",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "CEPNR",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "TTY TYRM",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "SYS SYS",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "SIOMJR",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "NDC",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "REVENUE INTEGRITY",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "SABRESONIC",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "SABRE IX",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "robo",
+      "chave": "LATAM XP",
+      "titulo": "",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Cadeira de Rodas",
+      "descricao": "",
+      "cor": "",
+      "modo": "comeca",
+      "padrao": "WC",
+      "padrao2": "",
+      "extra": {
+        "icone": "wheelchair"
+      },
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Pet na Cabine",
+      "descricao": "",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "PETC",
+      "padrao2": "",
+      "extra": {
+        "icone": "pet"
+      },
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Refeição Especial",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "ML",
+      "padrao2": "",
+      "extra": {
+        "icone": "meal"
+      },
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Assento pago (SSPR)",
+      "descricao": "O código B- é o código autorizador do pagamento.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "SSPR",
+      "padrao2": "",
+      "extra": {
+        "icone": "ticket"
+      },
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Número do bilhete eletrônico (TKNE)",
+      "descricao": "",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "TKNE",
+      "padrao2": "",
+      "extra": {
+        "icone": "ticket"
+      },
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Usuário LATAM XP (LAXP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "LAXP",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Marca tarifária (BRND)",
+      "descricao": "Ex.: KM = Standard.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "BRND",
+      "padrao2": "",
+      "extra": {
+        "icone": "info"
+      },
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "AF",
+      "titulo": "Bilhete grátis (prêmio)",
+      "descricao": "Emite bilhete gratuito (prêmio) – CTA (Switzerland).",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "BB",
+      "titulo": "Assento extra",
+      "descricao": "Reserva de assento extra (jumpseat).",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "BK",
+      "titulo": "Confirmado (automação)",
+      "descricao": "Reserva confirmada – usado apenas por contas automatizadas para segmentos OA. Gera uma mensagem de teletipo após o cancelamento. Não pode ser usado para gerar PTA.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "BL",
+      "titulo": "Lista de Espera",
+      "descricao": "Voo em lista de espera diretamente com a companhia aérea. Nenhuma mensagem é gerada, exceto para cancelamento.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "BR",
+      "titulo": "Cartão impresso",
+      "descricao": "Cartões de embarque (boarding pass) foram impressos.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "CG",
+      "titulo": "Embarcou em classe inferior",
+      "descricao": "Comprou executiva, embarcou na primeira classe ou econômica.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "CH",
+      "titulo": "Codeshare confirmado",
+      "descricao": "Codeshare, reserva confirmada.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "CN",
+      "titulo": "Cancelado",
+      "descricao": "Cancelado. Verifique uma alternativa.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "DL",
+      "titulo": "Lista Diferida",
+      "descricao": "Lista suspensa. Se ainda desejar, insira .CSS para HL.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "DS",
+      "titulo": "Desejado",
+      "descricao": "Deseja. Use quando os segmentos anteriores/seguintes forem HL. Quando os segmentos HL forem confirmados, insira .CSS para NN.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "FG",
+      "titulo": "Embarcou em classe inferior",
+      "descricao": "Comprou primeira classe, embarcou na executiva ou econômica.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "FS",
+      "titulo": "Venda livre",
+      "descricao": "Venda livre (freesell).",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "GK",
+      "titulo": "Confirmado (automação)",
+      "descricao": "Reserva confirmada – usado apenas por contas automatizadas para segmentos OA. Não gera mensagem e não pode ser usado para gerar PTA.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "GL",
+      "titulo": "Lista de Espera (automação)",
+      "descricao": "Lista de espera de reserva – usado apenas por contas automatizadas para segmentos OA. Não gera mensagem.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "GN",
+      "titulo": "Necessidade de Grupo",
+      "descricao": "Necessidade de grupo – o inventário não é reduzido. Coloque em fila automática para CRC42/15 para ter os assentos confirmados ou negados.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 150,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HK",
+      "titulo": "Confirmado",
+      "descricao": "Reserva confirmada. A mensagem não é gerada, a menos que OSI/SSR/5QQ seja adicionado ao PNR. Itinerário confirmado, mas não necessariamente pelo passageiro.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 160,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HL",
+      "titulo": "Lista de Espera",
+      "descricao": "Lista de espera de reserva.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 170,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HN",
+      "titulo": "Necessidade (sob solicitação)",
+      "descricao": "Tem necessidade – sob solicitação.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 180,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HS",
+      "titulo": "Venda (só OA)",
+      "descricao": "Tem venda – ajusta o inventário. Será visto apenas no histórico. Apenas OA.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 190,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HQ",
+      "titulo": "Aguardando OA",
+      "descricao": "Mantendo necessidade – aguardando liberação da OA.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 200,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "HX",
+      "titulo": "Cancelado",
+      "descricao": "Cancelado. Uma ação de cancelamento do sistema hospedeiro gerará um HX de volta para a fonte de reserva.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 210,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IC",
+      "titulo": "Classe incorreta",
+      "descricao": "Classe incorreta.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 220,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IG",
+      "titulo": "Up/Downgrade involuntário",
+      "descricao": "Upgrade/downgrade involuntário.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 230,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IK",
+      "titulo": "Infante (bebê)",
+      "descricao": "Infante (bebê).",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 240,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IN",
+      "titulo": "Se não reservado, precisa",
+      "descricao": "Se não estiver reservado, precisa – mensagem gerada.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 250,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IS",
+      "titulo": "Se não reservado, vende",
+      "descricao": "Se não estiver reservado, venda – mensagem gerada.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 260,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "IX",
+      "titulo": "Se reservado, cancela",
+      "descricao": "Se estiver reservado, cancele – mensagem gerada.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 270,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "JL",
+      "titulo": "Lista Prioritária",
+      "descricao": "Lista de espera prioritária – apenas companhia aérea hospedeira.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 280,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "KK",
+      "titulo": "Confirmado",
+      "descricao": "Agora confirmado. Insira .CSS para HK.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 290,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "KL",
+      "titulo": "Confirmado da Lista",
+      "descricao": "Confirmado a partir da lista. Insira .CSS para HK.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 300,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "LK",
+      "titulo": "Confirmado",
+      "descricao": "Reserva confirmada.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 310,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "LL",
+      "titulo": "Lista de Espera",
+      "descricao": "Lista de espera – mensagem gerada se for segmento OA.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 320,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "MM",
+      "titulo": "Refeição / Pet na cabine",
+      "descricao": "Solicitação de refeição para NRSA ou animal de estimação na cabine. Nota: pode ser reservado com o código de função /6/.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 330,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "NN",
+      "titulo": "Solicitado",
+      "descricao": "Precisa, solicitar status – mensagem gerada se for segmento OA.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 340,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "NO",
+      "titulo": "Nenhuma ação",
+      "descricao": "Nenhuma ação tomada – cancele o segmento e solicite uma alternativa.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 350,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "NR",
+      "titulo": "Sem registro",
+      "descricao": "Sem registro: o passageiro não foi embarcado.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 360,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "NS",
+      "titulo": "NO SHOW",
+      "descricao": "Não compareceu (no show), sem assento.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 370,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "OB",
+      "titulo": "Confirmação pendente (OB)",
+      "descricao": "O sistema seleciona o segmento como OB para confirmar mais tarde. Aparece quando o passageiro altera no site ou quando o CEPNR muda a classe. Não é overbooking de fato.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 380,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "OS",
+      "titulo": "Vendido em excesso",
+      "descricao": "Oversold (vendido em excesso).",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 390,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "OX",
+      "titulo": "Confirmado como alternativa",
+      "descricao": "Reserva confirmada como alternativa. Cancele apenas se o segmento solicitado estiver disponível.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 400,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "PK",
+      "titulo": "Segmento passivo",
+      "descricao": "Segmento passivo, apenas teletipo (TTY) de entrada.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 410,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "PN",
+      "titulo": "Pend. Confirmação",
+      "descricao": "Necessidade pendente – mensagem enviada anteriormente para OA, aguardando resposta. O Sabre reenviará automaticamente a solicitação uma vez se não houver resposta dentro de 24 horas.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 420,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "PS",
+      "titulo": "Espaço positivo",
+      "descricao": "Espaço positivo. Uma entrada 7PS no PNR permite que o sistema de embarque do aeroporto altere o status do segmento para -PS- durante o processo pós-embarque. O sistema de embarque pode ser NCI ou PCS.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 430,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "PU",
+      "titulo": "Seg. passivo c/ bilhete",
+      "descricao": "Atualização de segmento passivo com número do bilhete. Apenas teletipo (TTY) de entrada.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 440,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "RM",
+      "titulo": "Pré-removido",
+      "descricao": "Pré-removido, não pode ser reintegrado.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 450,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "RQ",
+      "titulo": "Sob solicitação",
+      "descricao": "Sob solicitação. Aparece no bilhete do passageiro para qualquer segmento não confirmado.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 460,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "RR",
+      "titulo": "Reconfirmado",
+      "descricao": "Reconfirmado – o passageiro telefonou e reconfirmou as reservas.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 470,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "SB",
+      "titulo": "Embarcou como standby",
+      "descricao": "Passageiro embarcado como standby (lista de espera no aeroporto).",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 480,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "SC",
+      "titulo": "Schedule Change",
+      "descricao": "Alteração de horário do sistema hospedeiro, mostra novo segmento. Altere o status do segmento para HK.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 490,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "SQ",
+      "titulo": "Espaço solicitado",
+      "descricao": "Espaço/serviço solicitado. Responda apenas se não estiver disponível.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 500,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "SS",
+      "titulo": "Vendido",
+      "descricao": "Segmento vendido (SS1 = 1 passageiro). Origem NN = solicitado pelo agente.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 510,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "TK",
+      "titulo": "Alt. horário (OA)",
+      "descricao": "Alteração de horário da OA, apenas novos horários. Insira .CSS para HK.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 520,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "TL",
+      "titulo": "Alt. horário (lista)",
+      "descricao": "Alteração de horário da OA – em lista de espera. Informe os novos horários e insira .CSS para HL.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 530,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "TN",
+      "titulo": "Alt. horário (solicitação)",
+      "descricao": "Sob solicitação/reserva necessária. Informe o passageiro sobre os novos horários/detalhes.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 540,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "UC",
+      "titulo": "Impossível Conf.",
+      "descricao": "Não é possível confirmar ou colocar em lista de espera.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 550,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "UN",
+      "titulo": "Voo Indisponível",
+      "descricao": "Não é possível confirmar: voo não está operando.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 560,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "US",
+      "titulo": "Impossível vender",
+      "descricao": "Não é possível vender: passageiro em lista de espera.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 570,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "UU",
+      "titulo": "Impossível confirmar",
+      "descricao": "Não é possível confirmar: passageiro em lista de espera.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 580,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "VG",
+      "titulo": "Up/Downgrade voluntário",
+      "descricao": "Upgrade/downgrade voluntário.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 590,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "WK",
+      "titulo": "Alt. Horário",
+      "descricao": "Estava confirmado, horário alterado/cancelado.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 600,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "WL",
+      "titulo": "Alt. horário (lista)",
+      "descricao": "Estava na lista de espera, horário alterado.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 610,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "WN",
+      "titulo": "Alt. horário (necessário)",
+      "descricao": "Era necessário, horário alterado.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 620,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "XK",
+      "titulo": "Alterado/cancelado (outra cia)",
+      "descricao": "Equivalente ao WK, mas para outras companhias aéreas: estava confirmado, horário alterado/cancelado.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 630,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "XM",
+      "titulo": "Cancelado: perda de conexão",
+      "descricao": "Cancelado devido a perda de conexão.",
+      "cor": "b-err",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 640,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "YG",
+      "titulo": "Embarcou em classe superior",
+      "descricao": "Comprou econômica, embarcou na executiva ou primeira classe.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 650,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "YK",
+      "titulo": "Reservado via fornecedor",
+      "descricao": "Reservado via fornecedor para documentação e acompanhamento da agência. Nenhuma mensagem gerada ou ação de itinerário requerida. O espaço está HK em outro registro.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 660,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "ZS",
+      "titulo": "Venda codeshare",
+      "descricao": "Venda de voo codeshare. Mensagem de entrada.",
+      "cor": "b-blue",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 670,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "SA",
+      "titulo": "Sujeito a Espaço",
+      "descricao": "Sujeito a espaço.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 680,
+      "ativo": true
+    },
+    {
+      "tipo": "status",
+      "chave": "OK",
+      "titulo": "Ok",
+      "descricao": "Ok.",
+      "cor": "b-ok",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 690,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "QP",
+      "titulo": "Basic",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "SL",
+      "titulo": "Light",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "KM",
+      "titulo": "Standard",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "SE",
+      "titulo": "Plus",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "KD",
+      "titulo": "Full",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "RL",
+      "titulo": "Premium Economy Standard",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "RY",
+      "titulo": "Premium Economy Full",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "tipo": "tarifa",
+      "chave": "EV",
+      "titulo": "Premium Business Standard",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_pax",
+      "chave": "",
+      "titulo": "Adulto",
+      "descricao": "",
+      "cor": "",
+      "modo": "palavra",
+      "padrao": "ADT",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_pax",
+      "chave": "",
+      "titulo": "Criança",
+      "descricao": "",
+      "cor": "",
+      "modo": "palavra",
+      "padrao": "CHD,CHILD",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_pax",
+      "chave": "",
+      "titulo": "Bebê",
+      "descricao": "",
+      "cor": "",
+      "modo": "palavra",
+      "padrao": "INF,INFANT",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_remark",
+      "chave": "",
+      "titulo": "Autorização de Pagamento (CVC)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^AUTH-CVC MATCHED.*",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_remark",
+      "chave": "",
+      "titulo": "Emissão de Tarifa Pública",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^FARE/PUB.*",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "tipo": "traducao_remark",
+      "chave": "",
+      "titulo": "Prazo de Emissão (Time Limit)$1",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^PL(\\s)",
+      "padrao2": "",
+      "extra": {},
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Documento do pagador (NRP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^NRP/(\\d+)$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "user",
+        "campos": [
+          {
+            "l": "Documento do pagador",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 160,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Pagamento enviado ao Allegro (WSP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "WSP APROBADO POR CYBERSOURCE",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Situação",
+            "v": "Enviado ao Allegro (portal de pagamentos). Às vezes não é finalizado: confira se o pagamento foi concluído."
+          }
+        ]
+      },
+      "ordem": 170,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Bilhete anulado (VOID)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "TV (\\d{13}) \\*VOID\\*",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "warn",
+        "campos": [
+          {
+            "l": "Ticket virtual (TV)",
+            "v": "$1"
+          },
+          {
+            "l": "Uso",
+            "v": "O VOID cria um ticket virtual (TV) para anular o bilhete."
+          }
+        ]
+      },
+      "ordem": 180,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Bilhete pago associado ao solicitado (CRPD)",
+      "descricao": "O bilhete pago foi associado ao bilhete solicitado nos outros SSR.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "CRPD",
+      "padrao2": "",
+      "extra": {
+        "icone": "ticket"
+      },
+      "ordem": 80,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Allegro (portal de pagamentos)",
+      "descricao": "Sistema de pagamentos da LATAM.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ8S2N",
+      "padrao2": "",
+      "extra": {
+        "k": "allegro",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "CEPNR (sistema)",
+      "descricao": "Sistema que altera a reserva (ex.: classe).",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ8WSX",
+      "padrao2": "CEPNR",
+      "extra": {
+        "k": "cepnr",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 130,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Sistema LATAM (HDQ)",
+      "descricao": "A LATAM tem vários sistemas que alteram a reserva (itinerário, assentos e outros elementos). Este ainda não tem nome cadastrado.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ",
+      "padrao2": "",
+      "extra": {
+        "k": "sistema",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 230,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Check-in automático (HDQ5RV4)",
+      "descricao": "Assinatura do check-in automático: grava documentos (DOCS), contato, gênero e habilitação para o check-in. Não é um agente.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "HDQ5RV4",
+      "padrao2": "HDQ5RV4,HDQRV4",
+      "extra": {
+        "k": "checkin",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 220,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Gênero feminino (FGEN)",
+      "descricao": "Informa que o passageiro é do gênero feminino.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "FGEN",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 90,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Gênero masculino (MGEN)",
+      "descricao": "Informa que o passageiro é do gênero masculino.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "MGEN",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 100,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Passageiro adolescente (TEEN)",
+      "descricao": "Indica que o passageiro é um adolescente.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "TEEN",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 110,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Documento de viagem (DOCS)",
+      "descricao": "P = passaporte; I = documento de identidade (ex.: CPF). No check-in o documento I costuma ser trocado pelo passaporte em voo internacional.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "DOCS",
+      "padrao2": "",
+      "extra": {
+        "icone": "doc"
+      },
+      "ordem": 120,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Bebê no colo (INFT)",
+      "descricao": "O bebê (INF) fica associado a um adulto e não usa assento. Em voo nacional não paga; em internacional paga 10%.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "INFT",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 140,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Alteração feita no Agente 360",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "A360",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Onde",
+            "v": "A alteração foi feita no Agente 360 (plataforma complementar)."
+          }
+        ]
+      },
+      "ordem": 190,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Serviços especiais (SSEE)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "SSEE",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Significado",
+            "v": "SSEE = serviços especiais."
+          }
+        ]
+      },
+      "ordem": 200,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Suporte Lua (SPL)",
+      "descricao": "Assinatura do Suporte Lua (R- SPL), como FS é a do Field Suporte. Atua quando a PNR fica diferente do bilhete comprado ou reemitido.",
+      "cor": "b-purple",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "SPL",
+      "extra": {
+        "k": "spl",
+        "robo": false,
+        "grupo": "agente"
+      },
+      "ordem": 5,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Field Suporte (FS)",
+      "descricao": "Assinatura do Field Suporte (R- FS).",
+      "cor": "b-purple",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "FS",
+      "extra": {
+        "k": "fs",
+        "robo": false,
+        "grupo": "agente"
+      },
+      "ordem": 6,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "UAO",
+      "titulo": "Aurora (Oregon, EUA)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 45.25,
+        "lon": -122.77
+      },
+      "ordem": 560,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "LON",
+      "titulo": "Londres (todos os aeroportos)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 51.51,
+        "lon": -0.13
+      },
+      "ordem": 570,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Documento de identificação (DOCO)",
+      "descricao": "Documento de identificação necessário para algumas rotas.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "DOCO",
+      "padrao2": "",
+      "extra": {
+        "icone": "doc"
+      },
+      "ordem": 150,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Documento de identificação (DOCA)",
+      "descricao": "Documento de identificação necessário para algumas rotas.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "DOCA",
+      "padrao2": "",
+      "extra": {
+        "icone": "doc"
+      },
+      "ordem": 160,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Support Desk (suporte aeroportuário)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "SUPPORT DESK",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Quem",
+            "v": "Support Desk: suporte aeroportuário com funções iguais ao CPC."
+          }
+        ]
+      },
+      "ordem": 210,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Reserva contingenciada pelo CPC (involuntário)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "MANTIENE OPC POR INVOLUNTARIO",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-sys",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Situação",
+            "v": "A reserva foi contingenciada pelo CPC por motivo involuntário."
+          },
+          {
+            "l": "Texto original",
+            "v": "MANTIENE OPC POR INVOLUNTARIO (OPC provavelmente é erro de escrita de CPC)"
+          }
+        ]
+      },
+      "ordem": 220,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "BVB",
+      "titulo": "Boa Vista",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 2.84,
+        "lon": -60.69
+      },
+      "ordem": 580,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CGR",
+      "titulo": "Campo Grande",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -20.47,
+        "lon": -54.67
+      },
+      "ordem": 590,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CZS",
+      "titulo": "Cruzeiro do Sul",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -7.6,
+        "lon": -72.77
+      },
+      "ordem": 600,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MCP",
+      "titulo": "Macapá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 0.05,
+        "lon": -51.07
+      },
+      "ordem": 610,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "STM",
+      "titulo": "Santarém",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -2.42,
+        "lon": -54.79
+      },
+      "ordem": 620,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MAB",
+      "titulo": "Marabá",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -5.37,
+        "lon": -49.14
+      },
+      "ordem": 630,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "UDI",
+      "titulo": "Uberlândia",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -18.88,
+        "lon": -48.23
+      },
+      "ordem": 640,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "IOS",
+      "titulo": "Ilhéus",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -14.82,
+        "lon": -39.03
+      },
+      "ordem": 650,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "BPS",
+      "titulo": "Porto Seguro",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -16.44,
+        "lon": -39.08
+      },
+      "ordem": 660,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CXJ",
+      "titulo": "Caxias do Sul",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -29.2,
+        "lon": -51.19
+      },
+      "ordem": 670,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "JOI",
+      "titulo": "Joinville",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -26.22,
+        "lon": -48.8
+      },
+      "ordem": 680,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MOC",
+      "titulo": "Montes Claros",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": -16.71,
+        "lon": -43.82
+      },
+      "ordem": 690,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "YVR",
+      "titulo": "Vancouver",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 49.19,
+        "lon": -123.18
+      },
+      "ordem": 700,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MEX",
+      "titulo": "Cidade do México",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 19.44,
+        "lon": -99.07
+      },
+      "ordem": 710,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "AMS",
+      "titulo": "Amsterdã",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 52.31,
+        "lon": 4.76
+      },
+      "ordem": 720,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "YYC",
+      "titulo": "Calgary",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 51.11,
+        "lon": -114.02
+      },
+      "ordem": 730,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "CPH",
+      "titulo": "Copenhague",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 55.62,
+        "lon": 12.66
+      },
+      "ordem": 740,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "TLV",
+      "titulo": "Tel Aviv",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 32.01,
+        "lon": 34.89
+      },
+      "ordem": 750,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MXP",
+      "titulo": "Milão Malpensa",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 45.63,
+        "lon": 8.72
+      },
+      "ordem": 760,
+      "ativo": true
+    },
+    {
+      "tipo": "aeroporto",
+      "chave": "MCO",
+      "titulo": "Orlando",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "",
+      "extra": {
+        "lat": 28.43,
+        "lon": -81.31
+      },
+      "ordem": 770,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Reemissão com saldo a favor (VMP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "VMP APROVADA REEMISSAO CUSTO ZERO / SALDO A FAVOR",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Situação",
+            "v": "Reemissão aprovada com custo zero e saldo a favor."
+          },
+          {
+            "l": "O que fazer",
+            "v": "Se houver EMD de valor residual, emitir no Allegro para reembolsar no sistema de Web Devoluções."
+          }
+        ]
+      },
+      "ordem": 230,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Reemissão aprovada (VMP)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "VMP APROVADA REEMISSAO",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Situação",
+            "v": "Reemissão aprovada (VMP)."
+          }
+        ]
+      },
+      "ordem": 240,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Sistema LATAM (WSAERRQ30)",
+      "descricao": "Sistema da LATAM que altera a reserva (aparece em R- WSAERRQ30).",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "WSAERRQ30",
+      "extra": {
+        "k": "wsaerrq",
+        "robo": true,
+        "grupo": "auto"
+      },
+      "ordem": 8,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Animal de serviço (SVAN)",
+      "descricao": "Passageiro viajando com animal de serviço (cão-guia). Veja os remarks \"SVAN INFO\" com o nome do animal e a certificação.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "SVAN",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 170,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Passageiro surdo (DEAF)",
+      "descricao": "Passageiro com deficiência auditiva (DEAF).",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "DEAF",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 180,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Contato por e-mail (CTCE)",
+      "descricao": "E-mail de contato do passageiro.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "CTCE",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 190,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Contato de emergência (PCTC)",
+      "descricao": "Contato de emergência do passageiro (nome e telefone).",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "PCTC",
+      "padrao2": "",
+      "extra": {
+        "icone": "user"
+      },
+      "ordem": 200,
+      "ativo": true
+    },
+    {
+      "tipo": "ssr",
+      "chave": "",
+      "titulo": "Documento de visto (DOCV)",
+      "descricao": "Informação de visto ou documento de viagem complementar.",
+      "cor": "",
+      "modo": "igual",
+      "padrao": "DOCV",
+      "padrao2": "",
+      "extra": {
+        "icone": "doc"
+      },
+      "ordem": 210,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Nome do animal de serviço",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^ANIMAL NAME\\s+(.+)$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Nome do animal",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 250,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Informações do animal de serviço (SVAN INFO)",
+      "descricao": "",
+      "cor": "",
+      "modo": "contem",
+      "padrao": "SVAN INFO",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Significado",
+            "v": "Cabeçalho dos remarks do animal de serviço (SVAN), gravados pelo Agente 360."
+          }
+        ]
+      },
+      "ordem": 260,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Certificação do animal de serviço",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^CERTIFICATION\\s+(.+)$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Certificação",
+            "v": "$1"
+          }
+        ]
+      },
+      "ordem": 270,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Linha separadora (asteriscos)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^\\*{10,}$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-remark",
+        "icone": "info",
+        "campos": [
+          {
+            "l": "Significado",
+            "v": "Linha decorativa que separa blocos de remarks."
+          }
+        ]
+      },
+      "ordem": 280,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Crédito da troca (valor do bilhete anterior)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^FEE/EXCHCREDIT,([0-9.]+),([A-Z]{3})$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Crédito da troca",
+            "v": "$2 $1"
+          },
+          {
+            "l": "Significado",
+            "v": "Valor do bilhete anterior aproveitado na troca (abatido do valor da nova tarifa)."
+          }
+        ]
+      },
+      "ordem": 290,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Tarifa da troca (EXCHFARE)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^EXCHFARE/AMT/(\\d+)([A-Z]{3})/([0-9.]+)/([0-9.]+)/([0-9.]+)/([A-Z]{3})$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Passageiros",
+            "v": "$1 $2"
+          },
+          {
+            "l": "Tarifa",
+            "v": "$6 $3"
+          },
+          {
+            "l": "Taxas",
+            "v": "$6 $4"
+          },
+          {
+            "l": "Total",
+            "v": "$6 $5"
+          }
+        ]
+      },
+      "ordem": 300,
+      "ativo": true
+    },
+    {
+      "tipo": "remark",
+      "chave": "",
+      "titulo": "Taxa de troca (CHANGE)",
+      "descricao": "",
+      "cor": "",
+      "modo": "regex",
+      "padrao": "^FEE/CHANGE,([0-9.]+),([A-Z]{3})$",
+      "padrao2": "",
+      "extra": {
+        "cat": "cat-pay",
+        "icone": "ticket",
+        "campos": [
+          {
+            "l": "Taxa de troca",
+            "v": "$2 $1"
+          }
+        ]
+      },
+      "ordem": 310,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Check-in (CKI)",
+      "descricao": "Sistema de check-in (R- CKI): atribui ou troca assentos no check-in. Não é agente.",
+      "cor": "b-gray",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "CKI",
+      "extra": {
+        "k": "cki",
+        "robo": true,
+        "grupo": "auto",
+        "sem_assinatura": true
+      },
+      "ordem": 240,
+      "ativo": true
+    },
+    {
+      "tipo": "ator",
+      "chave": "",
+      "titulo": "Agência de viagem (Envision Travel)",
+      "descricao": "Agência externa (R- WEBSERVICE/ENVISIONTRAVEL, LATAM/ENVISION; OAC JJ BSB 7U 9960128). Não é agente aeroportuário: não altere sem autorização da agência.",
+      "cor": "b-warn",
+      "modo": "contem",
+      "padrao": "",
+      "padrao2": "ENVISION,CAMARA DOS DEPUTADOS",
+      "extra": {
+        "k": "agencia_envision",
+        "robo": false,
+        "grupo": "agente"
+      },
+      "ordem": 250,
+      "ativo": true
+    }
+  ],
+  "modulos": [
+    {
+      "nome": "sabre-split",
+      "tipo": "js",
+      "descricao": "Avisa que houve split e mostra o código da nova reserva.",
+      "codigo": "/* Split: o histórico só informa que o split foi feito e o código da nova reserva (não informa quais passageiros). */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar achados = [], divide = 0;\nSabre.hook('antes', function (t) {\n  achados = []; divide = 0;\n  var txt = plano(t), re = /SPLIT TO\\/(\\d{2})(\\d{2})\\d{2}\\/(\\d{2}[A-Z]{3}\\d{2})\\s+([A-Z0-9]{6})\\b/g, m, vistos = {};\n  while ((m = re.exec(txt))) { if (vistos[m[4]]) continue; vistos[m[4]] = 1; achados.push({ pnr: m[4], hora: m[1] + ':' + m[2], data: m[3] }); }\n  divide = (txt.match(/DATA REMOVED DUE TO DIVIDE/g) || []).length;\n  return t;\n});\nSabre.hook('alertas', function () {\n  return achados.map(function (a) {\n    return { cls: 'alert-blue', icone: 'info', titulo: 'Split realizado: nova reserva ' + a.pnr,\n      desc: 'Split em ' + a.data + ' às ' + a.hora + '. O histórico não informa quais passageiros foram para a nova reserva: abra a reserva ' + a.pnr + ' para conferir.' + (divide ? ' Também há ' + divide + ' registro(s) de dados removidos pela divisão.' : '') };\n  });\n});\n",
+      "ordem": 10,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-nao-emitido",
+      "tipo": "js",
+      "descricao": "Alerta de segmentos cancelados por falta de pagamento (XXLD AS NOT TICKETED); lembra que pode ser erro operacional se o pagamento estava feito.",
+      "codigo": "/* XXLD AS NOT TICKETED: segmentos cancelados porque o bilhete não foi pago/emitido. */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar qtd = 0;\nSabre.hook('antes', function (t) { qtd = (plano(t).match(/XXLD AS NOT TICKETED/g) || []).length; return t; });\nSabre.hook('alertas', function () {\n  if (!qtd) return [];\n  return [{ cls: 'alert-red', icone: 'warn', titulo: 'Segmentos cancelados por falta de pagamento (XXLD AS NOT TICKETED)',\n    desc: 'O sistema cancelou segmento(s) porque o bilhete não foi emitido/pago. Avisos no histórico: ' + qtd + '. Se o pagamento já estava feito, pode ser erro operacional do sistema ao derrubar os voos por falta de pagamento. Confira o status dos segmentos antes de qualquer ação.' }];\n});\n",
+      "ordem": 20,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-etsync",
+      "tipo": "js",
+      "descricao": "Alerta de bilhete com cupom sem correspondência com o segmento (ETSYNC).",
+      "codigo": "/* ETSYNC SSRTKNX: o cupom do bilhete não casa com o segmento; a emissão ou reemissão vai ter problema. */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar bil = [];\nSabre.hook('antes', function (t) {\n  bil = [];\n  var re = /ETSYNC SSRTKNX - LOOSE OR NO MATCH FOUND BETWEEN COUPON AND SEGMENT - (\\d{13})\\/C(\\d)/g, m, vistos = {}, txt = plano(t);\n  while ((m = re.exec(txt))) { var k = m[1] + 'C' + m[2]; if (!vistos[k]) { vistos[k] = 1; bil.push(m[1] + ' (cupom C' + m[2] + ')'); } }\n  return t;\n});\nSabre.hook('alertas', function () {\n  if (!bil.length) return [];\n  return [{ cls: 'alert-yellow', icone: 'ticket', titulo: 'Bilhete com problema: cupom sem correspondência com o segmento (ETSYNC)',\n    desc: 'O bilhete vai ter problema na emissão ou reemissão. Bilhete(s): ' + bil.slice(0, 4).join(', ') + (bil.length > 4 ? ' e mais ' + (bil.length - 4) : '') + '.' }];\n});\n",
+      "ordem": 30,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-waiver-contact-center",
+      "tipo": "js",
+      "descricao": "Identifica waiver por erro operacional do contact center (WVER).",
+      "codigo": "/* SSR WVER ... ERROR CONTACT CENTER: waiver por erro operacional do contact center (a LATAM usa outros tipos de waiver). */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar wv = [], total = 0;\nSabre.hook('antes', function (t) {\n  wv = []; total = 0;\n  var re = /WVER[^\\n]*?EXCP F (\\d+) EPR (\\d+) AMNT (\\d+)[^\\n]*?ERROR CONTACT CENTER/g, m, vistos = {}, txt = plano(t);\n  while ((m = re.exec(txt))) { total++; if (!vistos[m[1]]) { vistos[m[1]] = 1; wv.push('F ' + m[1] + ' (AMNT ' + m[3] + ' USD)'); } }\n  return t;\n});\nSabre.hook('alertas', function () {\n  if (!wv.length) return [];\n  return [{ cls: 'alert-yellow', icone: 'warn', titulo: 'Waiver por erro de contact center (erro operacional)',\n    desc: total + ' registro(s) WVER. Referências: ' + wv.slice(0, 4).join(' · ') + (wv.length > 4 ? ' e mais ' + (wv.length - 4) : '') + '. A LATAM também usa outros tipos de waiver; este é o de erro operacional.' }];\n});\n",
+      "ordem": 40,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-ti-ts",
+      "tipo": "js",
+      "descricao": "Avisa quando o segmento está casado com o passageiro em outra reserva (TI TS).",
+      "codigo": "/* H-TI TS DETECTED: o segmento está casado com o passageiro em outra reserva. */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar qtd = 0;\nSabre.hook('antes', function (t) { qtd = (plano(t).match(/TI TS DETECTED/g) || []).length; return t; });\nSabre.hook('alertas', function () {\n  if (!qtd) return [];\n  return [{ cls: 'alert-blue', icone: 'info', titulo: 'TI TS detectado: segmento casado com o passageiro em outra reserva',\n    desc: 'Aparece ' + qtd + ' vez(es) no histórico. O mesmo segmento e passageiro estão em outra reserva: confira a outra reserva antes de alterar ou cancelar.' }];\n});\n",
+      "ordem": 50,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-troca-classe",
+      "tipo": "js",
+      "descricao": "Indício quando a classe de um voo é trocada várias vezes.",
+      "codigo": "/* Troca de classe repetida (ex.: Q > K > L). O histórico é lido do mais novo para o mais antigo; a sequência é mostrada da mais antiga para a mais recente. */\n/* Prepara o texto: tira o separador ¥, espaços de fim de linha, linhas vazias e junta linhas quebradas (continuação com 3+ espaços). */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\n\nvar voos = [];\nSabre.hook('antes', function (t) {\n  voos = [];\n  var re = /^AS\\s+(?:([A-Z0-9]{2})\\s+)?(\\d{1,4})([A-Z])\\s+(\\d{2}[A-Z]{3})\\s+([A-Z]{6})/gm, m, mapa = {}, ordem = [], txt = plano(t);\n  while ((m = re.exec(txt))) { var k = (m[1] || 'LA') + m[2] + ' ' + m[4] + ' ' + m[5]; if (!mapa[k]) { mapa[k] = []; ordem.push(k); } mapa[k].push(m[3]); }\n  ordem.forEach(function (k) {\n    var seq = mapa[k].slice().reverse().filter(function (c, i, a) { return i === 0 || c !== a[i - 1]; });\n    if (seq.length >= 3) voos.push(k.split(' ').slice(0, 2).join(' ') + ': ' + seq.join(' > '));\n  });\n  return t;\n});\nSabre.hook('fatos', function (f) {\n  if (!voos.length) return;\n  f.indicios.push({ cls: 'alert-blue', ico: 'info', t: 'Classe trocada várias vezes',\n    d: voos.slice(0, 6).join(' · ') + '. Trocar só a classe não dá direito a involuntária. Para reemitir, algumas classes funcionam melhor que outras; com outras companhias costuma-se escolher a Y (padrão da econômica).' });\n});\n",
+      "ordem": 60,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-agente-aeroporto",
+      "tipo": "js",
+      "descricao": "Reconhece agente aeroportuário pela assinatura (IATA da cidade + código).",
+      "codigo": "/* Agente aeroportuário: a assinatura começa com o código IATA da cidade onde o agente trabalha.\n   Ex.: Call Center = QOC5GUJ; o mesmo agente em Porto Alegre = POA5GUJ; em São Paulo = SAO5GUJ (nunca GRU nem CGH).\n   A assinatura pode ter ponto (ex.: BSB8C.Z). Só vale se as 3 letras forem uma cidade conhecida e\n   se nenhuma regra \"Quem alterou\" já reconhece a assinatura (robôs, Call Center, CPC, site etc.). */\nSabre.hook('ator', function (code, from, station) {\n  var c = String(code || '').toUpperCase(), f = String(from || '').toUpperCase();\n  var m = c.match(/^([A-Z]{3})(\\d)([A-Z0-9.]{2,3})$/);\n  if (!m || m[1] === 'HDQ') return;\n  var cidade = Sabre.iataFull(m[1]);\n  if (!cidade || cidade === m[1]) return;\n  var R = (Sabre.regras && Sabre.regras.atores) || [];\n  for (var i = 0; i < R.length; i++) {\n    var r = R[i];\n    if (r.semAssinatura && c) continue;\n    if ((r.sigs && r.sigs.some(function (p) { return c.indexOf(p) === 0; })) || (r.textos && r.textos.some(function (p) { return f.indexOf(p) >= 0; }))) return;\n  }\n  var robos = (Sabre.dicionarios && Sabre.dicionarios.robos) || [];\n  if (robos.some(function (x) { return f.indexOf(x) >= 0; })) return;\n  return { k: 'aeroporto_' + m[1], rot: 'Agente aeroportuário – ' + cidade, grupo: 'agente', cls: 'b-blue', robo: false,\n    desc: 'Assinatura ' + c + ': agente aeroportuário. As 3 primeiras letras são o código IATA da cidade onde ele trabalha (em São Paulo é SAO, não GRU nem CGH).' };\n});\n",
+      "ordem": 70,
+      "ativo": true
+    },
+    {
+      "nome": "sabre-void",
+      "tipo": "js",
+      "codigo": "/* VOID: o cancelamento cria um ticket virtual (TV) que anula o bilhete emitido. */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\nvar v = [];\nSabre.hook('antes', function (t) {\n  v = [];\n  var re = /TV (\\d{13}) \\*VOID\\*/g, m, vistos = {}, txt = plano(t);\n  while ((m = re.exec(txt))) { if (!vistos[m[1]]) { vistos[m[1]] = 1; v.push(m[1]); } }\n  return t;\n});\nSabre.hook('alertas', function () {\n  if (!v.length) return [];\n  return [{ cls: 'alert-yellow', icone: 'ticket', titulo: 'Bilhete anulado (VOID)',\n    desc: 'O VOID cria um ticket virtual (TV) para anular o bilhete: ' + v.slice(0, 4).join(', ') + (v.length > 4 ? ' e mais ' + (v.length - 4) : '') + '. Confira se o itinerário voltou ao anterior.' }];\n});\n",
+      "ordem": 80,
+      "ativo": true,
+      "descricao": "Alerta de bilhete anulado (VOID) pelo ticket virtual TV."
+    },
+    {
+      "nome": "sabre-bebe-idade",
+      "tipo": "js",
+      "codigo": "/* Bebê (INF): só vale até 2 anos. A linha INFT traz a data de nascimento; a idade é conferida na data de cada voo. */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\nvar MES = { JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5, JUL: 6, AUG: 7, SEP: 8, OCT: 9, NOV: 10, DEC: 11 };\nvar achados = [];\nSabre.hook('antes', function (t) {\n  achados = [];\n  var txt = plano(t), ref = txt.match(/\\/(\\d{2})([A-Z]{3})(\\d{2})\\b/);\n  var anoRef = ref ? 2000 + Number(ref[3]) : new Date().getFullYear(), mesRef = ref && MES[ref[2]] != null ? MES[ref[2]] : 0;\n  var re = /INFT LA HK1 [A-Z]{6}\\d{3,4}[A-Z]?(\\d{2})([A-Z]{3})\\/([A-Z' ]+\\/[A-Z' ]+)\\/(\\d{2})([A-Z]{3})(\\d{2})/g, m, vistos = {};\n  while ((m = re.exec(txt))) {\n    if (MES[m[2]] == null || MES[m[5]] == null) continue;\n    var anoVoo = anoRef + (MES[m[2]] < mesRef ? 1 : 0);\n    var voo = new Date(anoVoo, MES[m[2]], Number(m[1])), nasc = new Date(2000 + Number(m[6]), MES[m[5]], Number(m[4]));\n    var meses = (voo.getFullYear() - nasc.getFullYear()) * 12 + voo.getMonth() - nasc.getMonth() - (voo.getDate() < nasc.getDate() ? 1 : 0);\n    var k = m[3] + m[1] + m[2];\n    if (meses >= 24 && !vistos[m[3]]) { vistos[m[3]] = 1; achados.push({ nome: m[3], nasc: m[4] + '/' + ('0' + (MES[m[5]] + 1)).slice(-2) + '/' + (2000 + Number(m[6])), voo: m[1] + m[2], anos: Math.floor(meses / 12), meses: meses % 12 }); }\n  }\n  return t;\n});\nSabre.hook('alertas', function () {\n  return achados.map(function (a) {\n    return { cls: 'alert-red', icone: 'warn', titulo: 'Bebê (INF) acima do limite de idade',\n      desc: a.nome + ' nasceu em ' + a.nasc + ' e terá ' + a.anos + ' anos e ' + a.meses + ' meses no voo de ' + a.voo + '. O INF vale só até 2 anos: confira antes de seguir.' };\n  });\n});\n",
+      "ordem": 90,
+      "ativo": true,
+      "descricao": "Alerta quando o bebê (INF) passa de 2 anos na data do voo."
+    },
+    {
+      "nome": "sabre-pagante-modelo",
+      "tipo": "js",
+      "codigo": "/* Dados do pagante (NMP/NRP) com o texto-modelo no lugar dos dados reais. */\nfunction plano(t){ return String(t).replace(/\\u00a5/g,'').replace(/[ \\t]+$/gm,'').replace(/\\n\\s*\\n/g,'\\n').replace(/\\n {3,}/g,''); }\nvar f = [];\nSabre.hook('antes', function (t) {\n  f = []; var txt = plano(t);\n  if (/H-NMP\\/NOME PAGANTE/.test(txt)) f.push('nome do pagante (NMP)');\n  if (/H-NRP\\/CPF\\/CNPJ/.test(txt)) f.push('documento do pagante (NRP)');\n  return t;\n});\nSabre.hook('alertas', function () {\n  if (!f.length) return [];\n  return [{ cls: 'alert-yellow', icone: 'warn', titulo: 'Dados do pagante com texto-modelo',\n    desc: 'Aparece o texto-modelo no lugar dos dados reais: ' + f.join(' e ') + '. O próprio sistema coloca esse texto (motivo desconhecido): os dados do pagante não parecem preenchidos.' }];\n});\n",
+      "ordem": 100,
+      "ativo": false,
+      "descricao": "Alerta quando NMP/NRP estão com texto-modelo (NOME PAGANTE, CPF/CNPJ)."
+    },
+    {
+      "nome": "sabre-ocultar-desconhecidos",
+      "tipo": "js",
+      "codigo": "/* O que o time ainda não sabe explicar não aparece como informação: essas linhas são descartadas\n   (OSI YY REFUND100, SSR ENRL e H-MTO.PURCHASER). Para voltar a mostrar, desative este módulo. */\nSabre.hook('linha', function (l) {\n  if (/OSI YY REFUND100/.test(l)) return { ignorar: true };\n  if (/^[AXU]4S\\*?\\s+SSR ENRL\\b/.test(l)) return { ignorar: true };\n  if (/^[AXU]5H\\*?\\s+H-MTO\\.PURCHASER/.test(l)) return { ignorar: true };\n});\n",
+      "ordem": 110,
+      "ativo": true,
+      "descricao": "Esconde linhas que o time ainda não sabe explicar (REFUND100, ENRL, MTO.PURCHASER)."
+    },
+    {
+      "nome": "sabre-ob",
+      "tipo": "js",
+      "codigo": "/* OB: o segmento entra como OB e o sistema confirma depois (alteração no site ou mudança de classe pelo CEPNR). Texto e cor vêm do indício \"ob\" da aba Regras. */\nSabre.hook('fatos', function (f, ctx) {\n  var r = ((Sabre.regras && Sabre.regras.indicios) || []).filter(function (x) { return x.k === 'ob'; })[0];\n  if (!r) return;\n  var vistos = {};\n  ctx.cron.forEach(function (b) {\n    b.evs.forEach(function (e) {\n      var m = e.meta || {};\n      if (m.kind !== 'seg' || m.acao === 'XS' || (m.stOld !== 'OB' && m.stNew !== 'OB')) return;\n      var k = m.voo + '|' + m.data + '|' + (b.dt || '');\n      if (vistos[k]) return; vistos[k] = 1;\n      f.indicios.push({ cls: r.cls, ico: r.icone || 'info', t: r.titulo + ' · ' + m.voo + ' ' + m.data, d: r.desc.replace(/\\{dt\\}/g, b.dt || '') + ' Quem: ' + ((b.ator && b.ator.rot) || 'não identificado') + '.' });\n    });\n  });\n});\n",
+      "ordem": 120,
+      "ativo": true,
+      "descricao": "Indício de segmento marcado como OB (confirmação pendente)."
+    },
+    {
+      "nome": "sabre-lp",
+      "tipo": "js",
+      "codigo": "/* LP: assento removido (X4G) com o atributo LP = alterado sem autorização do passageiro. Texto e cor vêm do indício \"lp\" da aba Regras. */\nSabre.hook('fatos', function (f, ctx) {\n  var r = ((Sabre.regras && Sabre.regras.indicios) || []).filter(function (x) { return x.k === 'lp'; })[0];\n  if (!r) return;\n  var vistos = {};\n  ctx.cron.forEach(function (b) {\n    b.evs.forEach(function (e) {\n      var m = e.meta || {};\n      var linhaX = m.kind === 'seatswap' ? String(e.raw || '').split('\\n')[0] : (m.kind === 'seat' && m.acao === 'X' ? String(e.raw || '') : null);\n      if (linhaX === null || !/\\bLP\\b/.test(linhaX.split(/\\s-[A-Z]/)[0])) return;\n      var k = m.voo + '|' + m.data + '|' + (b.dt || '');\n      if (vistos[k]) return; vistos[k] = 1;\n      f.indicios.push({ cls: r.cls, ico: r.icone || 'info', t: r.titulo + ' · ' + m.voo + ' ' + m.data + ((m.seat || m.de) ? ' (' + (m.seat || m.de) + ')' : ''), d: r.desc.replace(/\\{dt\\}/g, b.dt || '') + ' Quem: ' + ((b.ator && b.ator.rot) || 'não identificado') + '.' });\n    });\n  });\n});\n",
+      "ordem": 130,
+      "ativo": true,
+      "descricao": "Indício de assento removido com atributo LP (alterado sem autorização do passageiro)."
+    }
+  ]
+}
